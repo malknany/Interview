@@ -5,7 +5,7 @@ import 'package:interview_project/screens/splash/view.dart';
 import 'package:interview_project/screens/usre-section/signup/view.dart';
 
 import 'core/app-rout/navigate.dart';
-import 'core/themes/app_theme.dart';
+import 'core/style/app_theme.dart';
 
 void main(){
   runApp(
