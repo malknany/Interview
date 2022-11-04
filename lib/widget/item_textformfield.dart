@@ -16,7 +16,7 @@ class ItemTextFormFiled extends StatelessWidget {
           boxShadow: [
         BoxShadow(
             color: Colors.grey.withOpacity(0.25),
-            offset: Offset(2, 4),
+            offset: const Offset(2, 4),
             blurRadius: 2,)
       ]),
       child: TextFormField(

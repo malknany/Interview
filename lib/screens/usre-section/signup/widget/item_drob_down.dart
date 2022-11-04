@@ -22,7 +22,7 @@ class _ItemDropDownWidgetState extends State<ItemDropDownWidget> {
           boxShadow: [
             BoxShadow(
               color: Colors.grey.withOpacity(0.25),
-              offset: Offset(2, 4),
+              offset: const Offset(2, 4),
               blurRadius: 2,)
           ]
       ),
@@ -58,7 +58,7 @@ class _ItemDropDownWidgetState extends State<ItemDropDownWidget> {
             dropdownValue = newValue!;
           });
         },
-        icon: Icon(Icons.keyboard_arrow_down_rounded),
+        icon: const Icon(Icons.keyboard_arrow_down_rounded),
         iconSize: 35,
         items: <String>['Male', 'Female',]
             .map<DropdownMenuItem<String>>((String value) {

@@ -1,7 +1,6 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:interview_project/core/app-rout/navigate.dart';
 
 import '../choose_account/view.dart';
@@ -16,8 +15,8 @@ class SplashScreen extends StatefulWidget {
 class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
-    Timer(Duration(seconds: 5), () {
-      navigateTo(context, ChooseAccountScreen());
+    Timer(const Duration(seconds: 5), () {
+      navigateTo(context, const ChooseAccountScreen());
     },);
     super.initState();
   }

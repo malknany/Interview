@@ -14,16 +14,16 @@ class ItemButtonWidget extends StatelessWidget {
       onPressed: () {
         navigateTo(context, nextPage);
       },
-      child: Text(
-        text,
-        style: AppTextStyle.cairoFontSimBold(fontSize: 36,myColor: Colors.white),
-      ),
       style: ElevatedButton.styleFrom(
           backgroundColor: AppColor.myTeal,
           fixedSize: Size(376.w, 70.h),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(10.r),
           )),
+      child: Text(
+        text,
+        style: AppTextStyle.cairoFontSimBold(fontSize: 36,myColor: Colors.white),
+      ),
     );
   }
 }

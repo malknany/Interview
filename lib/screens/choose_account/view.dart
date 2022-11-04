@@ -21,7 +21,7 @@ class ChooseAccountScreen extends StatelessWidget {
               SizedBox(height: 27.55.h,),
               Text('Choose Your Account',style: TextStyle(fontSize: 28.sp,color: AppColor.myTeal,fontWeight: FontWeight.bold,fontFamily: AppStrings.fontCairo),),
               SizedBox(height: 28.h,),
-              ItemContainer(image: 'assets/image/user.png', text: 'USER',width: 75,nextPage: OnBoardingScreen()),
+              const ItemContainer(image: 'assets/image/user.png', text: 'USER',width: 75,nextPage: OnBoardingScreen()),
               SizedBox(height: 36.h,),
               ItemContainer(image:'assets/image/company.png', text: 'COMPANY',width: 19,nextPage: Container(),)
             ],

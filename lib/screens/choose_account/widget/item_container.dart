@@ -26,7 +26,7 @@ class ItemContainer extends StatelessWidget {
           boxShadow: [
             BoxShadow(
               color: Colors.grey.withOpacity(0.5),
-              offset: Offset(4, 8),
+              offset: const Offset(4, 8),
               blurRadius: 5
             )
           ],
