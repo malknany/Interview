@@ -50,42 +50,42 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   SizedBox(
                     height: 15.h,
                   ),
-                  ItemTextFormFiled(
+                  const ItemTextFormFiled(
                     hintText: 'First name',
                   ),
                   SizedBox(
                     height: 12.h,
                   ),
-                  ItemTextFormFiled(
+                  const ItemTextFormFiled(
                     hintText: 'Last name',
                   ),
                   SizedBox(
                     height: 12.h,
                   ),
-                  ItemTextFormFiled(
+                  const ItemTextFormFiled(
                     hintText: 'Enter your email',
                   ),
                   SizedBox(
                     height: 12.h,
                   ),
-                  ItemTextFormFiled(
+                  const ItemTextFormFiled(
                     hintText: 'Password',
                   ),
                   SizedBox(
                     height: 12.h,
                   ),
                   //ItemTextFormFiled(hintText: 'Gender'),
-                  ItemDropDownWidget(),
+                  const ItemDropDownWidget(),
                   SizedBox(
                     height: 12.h,
                   ),
-                  ItemTextFormFiled(
+                  const ItemTextFormFiled(
                     hintText: 'Phone',
                   ),
                   SizedBox(
                     height: 22.h,
                   ),
-                  ItemButtonWidget(text: 'Register', nextPage: SizedBox()),
+                  const ItemButtonWidget(text: 'Register', nextPage: SizedBox()),
                   SizedBox(
                     height: 12.h,
                   ),
@@ -102,7 +102,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       ),
                       GestureDetector(
                         onTap: () {
-                          navigateTo(context, LogInScreen());
+                          navigateTo(context, const LogInScreen());
                         },
                         child: Text(
                           'login',
@@ -121,7 +121,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   SizedBox(
                     height: 24.h,
                   ),
-                  TextInLine(),
+                  const TextInLine(),
                   SizedBox(
                     height: 20.h,
                   ),
