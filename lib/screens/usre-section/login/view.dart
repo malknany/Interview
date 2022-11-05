@@ -76,7 +76,7 @@ class _LogInScreenState extends State<LogInScreen> {
                 SizedBox(
                   height: 30.h,
                 ),
-                const ItemButtonWidget(text: 'Login', nextPage: SizedBox()),
+                ItemButtonWidget(text: 'Login', nextPage: (){}),
                 SizedBox(
                   height: 25.h,
                 ),

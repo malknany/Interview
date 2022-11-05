@@ -83,7 +83,6 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                   padding: EdgeInsets.symmetric(horizontal: 20.w),
                   child: Text(
                     control.onBoarding[control.index].subTitle,
-                    // 23 midem my gray
                     style:  AppTextStyle.eBFontMedium(fontSize: 23, myColor: AppColor.myGraySubTitle),
                     textAlign: TextAlign.center,
                   ),
