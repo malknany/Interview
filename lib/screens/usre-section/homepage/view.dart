@@ -7,7 +7,7 @@ import 'package:interview_project/core/utils/app_color.dart';
 import '../hiring/view.dart';
 
 class HomePageScreen extends StatefulWidget {
-  HomePageScreen({Key? key}) : super(key: key);
+  const HomePageScreen({Key? key}) : super(key: key);
   @override
   State<HomePageScreen> createState() => _HomePageScreenState();
 }
@@ -15,21 +15,21 @@ class HomePageScreen extends StatefulWidget {
 class _HomePageScreenState extends State<HomePageScreen> {
   static const TextStyle optionStyle =
   TextStyle(fontSize: 30, fontWeight: FontWeight.w600);
-  static  List<Widget> _widgetScreen = <Widget>[
-    HiringScreen(),
-    Center(
+  static  final List<Widget> _widgetScreen = <Widget>[
+    const HiringScreen(),
+    const Center(
       child: Text(
         'Cv',
         style: optionStyle,
       ),
     ),
-    Center(
+    const Center(
       child: Text(
         'Learing',
         style: optionStyle,
       ),
     ),
-    Center(
+    const Center(
       child: Text(
         'Profile',
         style: optionStyle,
@@ -55,17 +55,17 @@ class _HomePageScreenState extends State<HomePageScreen> {
         ),
         child: SafeArea(
           child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: 15.0, vertical: 8),
+            padding: const EdgeInsets.symmetric(horizontal: 15.0, vertical: 8),
             child: GNav(
               rippleColor: AppColor.myTeal,
               hoverColor: AppColor.myTeal,
               gap: 9.w,
               activeColor: Colors.white,
               iconSize: 30.sp,
-              padding: EdgeInsets.symmetric(horizontal: 20, vertical: 12),
-              duration: Duration(milliseconds: 400),
+              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
+              duration: const Duration(milliseconds: 400),
               tabBackgroundColor: AppColor.myTeal,
-              color: Color(0xff455A64).withOpacity(0.71),
+              color: const Color(0xff455A64).withOpacity(0.71),
               tabs: [
                 GButton(
                   icon: Icons.campaign,

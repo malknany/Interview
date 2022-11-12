@@ -8,7 +8,7 @@ import 'package:interview_project/screens/usre-section/hiring/widget/bottom_shee
 import 'package:interview_project/screens/usre-section/hiring/widget/searsh_item.dart';
 
 class HiringScreen extends StatefulWidget {
-  HiringScreen({Key? key}) : super(key: key);
+  const HiringScreen({Key? key}) : super(key: key);
 
   @override
   State<HiringScreen> createState() => _HiringScreenState();
@@ -32,7 +32,7 @@ class _HiringScreenState extends State<HiringScreen> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      CircleAvatar(
+                      const CircleAvatar(
                         backgroundImage:
                             AssetImage('assets/image/profile_image.png'),
                       ),
@@ -48,7 +48,7 @@ class _HiringScreenState extends State<HiringScreen> {
                       'Find Your Dream Job',
                       style: AppTextStyle.cairoFontBold(
                         fontSize: 24.sp,
-                        myColor: Color(0xff455A64).withOpacity(0.84),
+                        myColor: const Color(0xff455A64).withOpacity(0.84),
                       ),
                     ),
                   ),
@@ -57,7 +57,7 @@ class _HiringScreenState extends State<HiringScreen> {
                       SizedBox(
                         height: 44.h,
                         width: 303.w,
-                        child: SearchItem(hintText: 'Search ......'),
+                        child: const SearchItem(hintText: 'Search ......'),
                       ),
                       SizedBox(
                         width: 10.w,
@@ -67,7 +67,7 @@ class _HiringScreenState extends State<HiringScreen> {
                           showModalBottomSheet(
                             isScrollControlled: true,
                             backgroundColor:
-                                Color(0xffD9D9D9).withOpacity(0.85),
+                                const Color(0xffD9D9D9).withOpacity(0.85),
                             context: context,
                             builder: (context) => StatefulBuilder(
                               builder: (context, setState) =>
@@ -88,7 +88,7 @@ class _HiringScreenState extends State<HiringScreen> {
                           child: Center(
                             child: ImageIcon(
                               color: AppColor.myTeal,
-                              AssetImage('assets/image/icon_edit.png'),
+                              const AssetImage('assets/image/icon_edit.png'),
                             ),
                           ),
                         ),
@@ -104,14 +104,14 @@ class _HiringScreenState extends State<HiringScreen> {
                           ' Recent Jobs',
                           style: AppTextStyle.cairoFontBold(
                             fontSize: 20.sp,
-                            myColor: Color(0xff455A64).withOpacity(0.84),
+                            myColor: const Color(0xff455A64).withOpacity(0.84),
                           ),
                         ),
                         Text(
                           'View All',
                           style: AppTextStyle.cairoFontMedium(
                             fontSize: 16.sp,
-                            myColor: Color(0xff455A64).withOpacity(0.84),
+                            myColor: const Color(0xff455A64).withOpacity(0.84),
                           ),
                         ),
                       ],

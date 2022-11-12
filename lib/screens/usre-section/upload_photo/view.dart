@@ -38,7 +38,7 @@ class _UpLoadPhotoScreenState extends State<UpLoadPhotoScreen> {
                   const Spacer(),
                   InkWell(
                     onTap: () {
-                      navigateTo(context, HomePageScreen());
+                      navigateTo(context, const HomePageScreen());
                     },
                     child: Text(
                       'Skip',

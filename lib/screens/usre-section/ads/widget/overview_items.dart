@@ -28,7 +28,7 @@ class OverViewItems extends StatelessWidget {
             ],
             shape: BoxShape.circle,
             border: Border.all(
-              color: Color(0xffE0E0E0),
+              color: const Color(0xffE0E0E0),
               width: 1.w,
               strokeAlign: StrokeAlign.inside,
             ),

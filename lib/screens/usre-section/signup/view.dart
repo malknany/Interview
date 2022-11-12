@@ -87,7 +87,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     height: 22.h,
                   ),
                   ItemButtonWidget(text: 'Register', nextPage: (){
-                    navigateTo(context, UpLoadPhotoScreen());
+                    navigateTo(context, const UpLoadPhotoScreen());
                   }),
                   SizedBox(
                     height: 12.h,

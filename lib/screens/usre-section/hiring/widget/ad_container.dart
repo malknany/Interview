@@ -45,7 +45,7 @@ class ADContainer extends StatelessWidget {
                       width: 86.w,
                       height: 76.h,
                       child: Image.asset(controller.ads[0].image)),
-                  Spacer(),
+                  const Spacer(),
                 ],
               ),
               Column(
@@ -79,7 +79,7 @@ class ADContainer extends StatelessWidget {
                   Row(
                     mainAxisSize: MainAxisSize.min,
                     children: [
-                      Icon(
+                      const Icon(
                         Icons.lightbulb,
                         color: Color(0xff18DAD0),
                       ),
@@ -90,7 +90,7 @@ class ADContainer extends StatelessWidget {
                         'Your profile matches this job',
                         style: AppTextStyle.eBFontSemBold(
                           fontSize: 13.sp,
-                          myColor: Color(0xff15553F),
+                          myColor: const Color(0xff15553F),
                         ),
                       ),
                     ],
@@ -102,16 +102,16 @@ class ADContainer extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.end,
                   children: [
-                    Icon(
+                    const Icon(
                       Icons.bookmark,
                       color: Color(0xff0C948D),
                     ),
-                    Spacer(),
+                    const Spacer(),
                     Text(
                       controller.ads[0].time,
                       style: AppTextStyle.eBFontBold(
                         fontSize: 14.sp,
-                        myColor: Color(0xff349792),
+                        myColor: const Color(0xff349792),
                       ),
                     ),
                   ],

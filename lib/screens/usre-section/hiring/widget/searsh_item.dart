@@ -23,7 +23,7 @@ class SearchItem extends StatelessWidget {
         hintText: hintText,
         hintStyle: AppTextStyle.eBFontMedium(
           fontSize: 16.sp,
-          myColor: Color(0xff585252),
+          myColor: const Color(0xff585252),
         ),
         filled: true,
         fillColor: Colors.white,

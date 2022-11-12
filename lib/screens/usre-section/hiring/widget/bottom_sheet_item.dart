@@ -131,7 +131,7 @@ class _ShowBottomSheetScreenState extends State<ShowBottomSheetScreen> {
                   ),
                   SizedBox(
                     height: 44.h,
-                    child: SearchItem(hintText: 'Search for city'),
+                    child: const SearchItem(hintText: 'Search for city'),
                   ),
                   Padding(
                     padding: EdgeInsets.symmetric(

@@ -59,7 +59,7 @@ class ADSScreen extends StatelessWidget {
                               ),
                             ],
                             border: Border.all(
-                              color: Color(0xffE0E0E0),
+                              color: const Color(0xffE0E0E0),
                               width: 1.w,
                               strokeAlign: StrokeAlign.inside,
                             ),
@@ -128,7 +128,7 @@ class ADSScreen extends StatelessWidget {
                             image: DecorationImage(
                                 image: AssetImage(controller.ads[0].image)),
                             border: Border.all(
-                              color: Color(0xffE0E0E0),
+                              color: const Color(0xffE0E0E0),
                               width: 1.w,
                               strokeAlign: StrokeAlign.inside,
                             ),
@@ -151,7 +151,7 @@ class ADSScreen extends StatelessWidget {
                       )
                     ],
                     borderRadius: BorderRadius.circular(10.r),
-                    color: Color(0xffF8F4F4),
+                    color: const Color(0xffF8F4F4),
                   ),
                   child: TabBar(
                     unselectedLabelColor: AppColor.myTeal,
@@ -160,7 +160,7 @@ class ADSScreen extends StatelessWidget {
                         color: AppColor.myTeal),
                     labelStyle: AppTextStyle.cairoFontMedium(
                         fontSize: 22.sp, myColor: AppColor.myDarkTeal),
-                    tabs: [
+                    tabs: const [
                       Tab(
                         text: 'Overview',
                       ),
@@ -179,7 +179,7 @@ class ADSScreen extends StatelessWidget {
                         children: [
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
+                            children: const [
                               OverViewItems(icon: Icons.person, subTitle: '4-5 years'),
                               OverViewItems(icon: Icons.business_center_sharp, subTitle: 'Full-time'),
                               OverViewItems(icon: Icons.people, subTitle: '51-200 employees'),
@@ -205,7 +205,7 @@ class ADSScreen extends StatelessWidget {
                         ],
                       ),
                     ),
-                    SizedBox(),
+                    const SizedBox(),
                   ]),
                 )
               ],
