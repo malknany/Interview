@@ -14,10 +14,12 @@ dependencies:
   flutter:
     sdk: flutter
   cupertino_icons: ^1.0.2
-  flutter_svg: ^1.1.6
+  # flutter_svg: ^1.1.6
   flutter_screenutil: ^5.5.4
   file_picker: ^5.0.1
-
+  google_nav_bar: ^5.0.6
+  group_button: ^5.2.2
+  
 dev_dependencies:
   flutter_test:
     sdk: flutter

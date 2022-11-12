@@ -18,7 +18,7 @@ class ItemTextFormFiled extends StatelessWidget {
             color: Colors.grey.withOpacity(0.25),
             offset: const Offset(2, 4),
             blurRadius: 2,)
-      ]),
+      ],),
       child: TextFormField(
         decoration: InputDecoration(
           focusedBorder: OutlineInputBorder(

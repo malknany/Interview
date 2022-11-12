@@ -54,6 +54,7 @@ class _UpLoadPhotoScreenState extends State<UpLoadPhotoScreen> {
               SizedBox(height: 112.h,),
               Image.asset('assets/image/uploadphoto.png'),
               SizedBox(height: 44.h,),
+              // fix it maby have some problem beuz virsion of flutter
               ItemButtonWidget(
                 text: 'upload your photo',
                 nextPage: () async {

@@ -19,7 +19,7 @@ class ItemButtonWidget extends StatelessWidget {
           )),
       child: Text(
         text,
-        style: AppTextStyle.cairoFontSimBold(fontSize: 36,myColor: Colors.white),
+        style: AppTextStyle.cairoFontSimBold(fontSize: 36.sp,myColor: Colors.white),
       ),
     );
   }
