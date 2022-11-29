@@ -19,7 +19,7 @@ class ADContainer extends StatelessWidget {
       child: InkWell(
         onTap: () => navigateTo(context, ADSScreen()),
         child: Container(
-          height: 153.h,
+          height: 170.h,
           width: 384.w,
           decoration: BoxDecoration(
             color: Colors.white,
@@ -42,63 +42,73 @@ class ADContainer extends StatelessWidget {
               Column(
                 children: [
                   SizedBox(
-                      width: 86.w,
+                      width: 60.w,
                       height: 76.h,
                       child: Image.asset(controller.ads[0].image)),
                   const Spacer(),
                 ],
               ),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Padding(
-                    padding: EdgeInsets.symmetric(vertical: 5.0.h),
-                    child: Text(controller.ads[0].textTitle,
-                        style: AppTextStyle.cairoFontBold(
-                            fontSize: 18.sp, myColor: AppColor.myDarkTealTitle)),
-                  ),
-                  Padding(
-                    padding: EdgeInsets.only(bottom: 3.0.h),
-                    child: Text(
-                      controller.ads[0].nameCompany,
-                      style: AppTextStyle.eBFontSemBold(
-                        fontSize: 15.sp,
-                        myColor: Colors.black.withOpacity(0.73),
-                      ),
+              SizedBox(
+                width: 235.w,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Padding(
+                      padding: EdgeInsets.symmetric(vertical: 5.0.h),
+                      child: Text(controller.ads[0].textTitle,
+                          softWrap: true,
+                          overflow: TextOverflow.ellipsis,
+                          style: AppTextStyle.cairoFontBold(
+                              fontSize: 18.sp,
+                              myColor: AppColor.myDarkTealTitle)),
                     ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(bottom: 11.0),
-                    child: Text(controller.ads[0].location,
+                    Padding(
+                      padding: EdgeInsets.only(bottom: 3.0.h),
+                      child: Text(
+                        controller.ads[0].nameCompany,
+                        softWrap: true,
+                        overflow: TextOverflow.ellipsis,
                         style: AppTextStyle.eBFontSemBold(
-                          fontSize: 13.sp,
+                          fontSize: 15.sp,
                           myColor: Colors.black.withOpacity(0.73),
                         ),
-                        textAlign: TextAlign.start),
-                  ),
-                  Row(
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      const Icon(
-                        Icons.lightbulb,
-                        color: Color(0xff18DAD0),
                       ),
-                      SizedBox(
-                        width: 5.3.w,
-                      ),
-                      Text(
-                        'Your profile matches this job',
-                        style: AppTextStyle.eBFontSemBold(
-                          fontSize: 13.sp,
-                          myColor: const Color(0xff15553F),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(bottom: 11.0),
+                      child: Text(controller.ads[0].location,
+                          softWrap: true,
+                          overflow: TextOverflow.ellipsis,
+                          style: AppTextStyle.eBFontSemBold(
+                            fontSize: 13.sp,
+                            myColor: Colors.black.withOpacity(0.73),
+                          ),
+                          textAlign: TextAlign.start),
+                    ),
+                    Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        const Icon(
+                          Icons.lightbulb,
+                          color: Color(0xff18DAD0),
                         ),
-                      ),
-                    ],
-                  ),
-                ],
+                        SizedBox(
+                          width: 5.3.w,
+                        ),
+                        Text(
+                          'Your profile matches this job',
+                          style: AppTextStyle.eBFontSemBold(
+                            fontSize: 13.sp,
+                            myColor: const Color(0xff15553F),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
               ),
               Padding(
-                padding: EdgeInsets.symmetric(horizontal: 10.0.w, vertical: 12.h),
+                padding: EdgeInsets.symmetric(vertical: 12.h),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.end,
                   children: [
@@ -109,6 +119,8 @@ class ADContainer extends StatelessWidget {
                     const Spacer(),
                     Text(
                       controller.ads[0].time,
+                      softWrap: true,
+                      overflow: TextOverflow.ellipsis,
                       style: AppTextStyle.eBFontBold(
                         fontSize: 14.sp,
                         myColor: const Color(0xff349792),

@@ -1,7 +1,7 @@
 import 'model.dart';
 
 class ControllerOnBoarding {
-  int index=0;
+  int index = 0;
   List<ModelOnBoarding> onBoarding = [
     ModelOnBoarding(
       img: 'assets/image/onbording1.png',
@@ -17,7 +17,8 @@ class ControllerOnBoarding {
     ModelOnBoarding(
       img: 'assets/image/onbording3.png',
       title: 'Learning Section',
-      subTitle: 'You can practice with us on how to deal with the avatar and see some videos and books that will help you succeed in the interview.',
+      subTitle:
+          'You can practice with us on how to deal with the avatar and see some videos and books that will help you succeed in the interview.',
     ),
   ];
 }

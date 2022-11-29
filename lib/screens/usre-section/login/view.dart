@@ -38,7 +38,7 @@ class _LogInScreenState extends State<LogInScreen> {
                 SizedBox(
                   height: 30.8.h,
                 ),
-                const ItemTextFormFiled(hintText:'enter your email'),
+                const ItemTextFormFiled(hintText: 'enter your email'),
                 SizedBox(
                   height: 35.h,
                 ),
@@ -76,7 +76,7 @@ class _LogInScreenState extends State<LogInScreen> {
                 SizedBox(
                   height: 30.h,
                 ),
-                ItemButtonWidget(text: 'Login', nextPage: (){}),
+                ItemButtonWidget(text: 'Login', nextPage: () {}),
                 SizedBox(
                   height: 25.h,
                 ),

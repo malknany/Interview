@@ -3,11 +3,14 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../core/style/text_style.dart';
 import '../../../../core/utils/app_color.dart';
+
 class OverViewItems extends StatelessWidget {
-   const OverViewItems({Key? key,required this.icon,required this.subTitle}) : super(key: key);
+  const OverViewItems({Key? key, required this.icon, required this.subTitle})
+      : super(key: key);
 
   final IconData icon;
   final String subTitle;
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -34,15 +37,13 @@ class OverViewItems extends StatelessWidget {
             ),
           ),
           child: Center(
-            child: Icon(icon,
-                color: AppColor.myTeal),
+            child: Icon(icon, color: AppColor.myTeal),
           ),
         ),
         Text(
           subTitle,
           style: AppTextStyle.cairoFontSimBold(
-              fontSize: 16.sp,
-              myColor: AppColor.textColorGray),
+              fontSize: 16.sp, myColor: AppColor.textColorGray),
         ),
       ],
     );

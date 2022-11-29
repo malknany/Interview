@@ -1,6 +1,9 @@
+import 'dart:io';
+
 import 'modle.dart';
 
 class HiringController {
+  File? image;
   List<HiringModel> text = [
     HiringModel(employmentType: 'Full time'),
     HiringModel(employmentType: 'Fresher'),

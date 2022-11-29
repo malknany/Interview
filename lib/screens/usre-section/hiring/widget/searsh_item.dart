@@ -3,18 +3,17 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../core/style/text_style.dart';
 import '../../../../core/utils/app_color.dart';
+
 class SearchItem extends StatelessWidget {
-  const SearchItem({Key? key,required this.hintText}) : super(key: key);
+  const SearchItem({Key? key, required this.hintText}) : super(key: key);
   final String hintText;
+
   @override
   Widget build(BuildContext context) {
     return TextFormField(
       decoration: InputDecoration(
-        contentPadding: EdgeInsets.only(
-            left: 17.w,
-            top: 9.h,
-            bottom: 14.h,
-            right: 18.w),
+        contentPadding:
+            EdgeInsets.only(left: 17.w, top: 9.h, bottom: 14.h, right: 18.w),
         suffixIcon: Icon(
           Icons.search,
           color: AppColor.myTeal,

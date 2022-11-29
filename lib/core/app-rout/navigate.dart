@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 
 final navigateKey = GlobalKey<NavigatorState>();
 
-void navigateToAndRemove({required Widget page, bool withHistory = true}) {
+void navigateToAndRemove(BuildContext context,
+    {required Widget page, bool withHistory = true}) {
   Navigator.pushAndRemoveUntil(
       navigateKey.currentContext!,
       PageRouteBuilder(
@@ -17,8 +18,8 @@ Future<void> navigateAndPop(BuildContext context, Widget page) {
 }
 
 Future<void> navigateTo(BuildContext context, Widget page) {
-return Navigator.of(context)
-    .push(MaterialPageRoute(builder: (context) => page));
+  return Navigator.of(context)
+      .push(MaterialPageRoute(builder: (context) => page));
 }
 
 void pop(BuildContext context) {

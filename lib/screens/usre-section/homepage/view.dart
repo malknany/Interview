@@ -8,14 +8,15 @@ import '../hiring/view.dart';
 
 class HomePageScreen extends StatefulWidget {
   const HomePageScreen({Key? key}) : super(key: key);
+
   @override
   State<HomePageScreen> createState() => _HomePageScreenState();
 }
 
 class _HomePageScreenState extends State<HomePageScreen> {
   static const TextStyle optionStyle =
-  TextStyle(fontSize: 30, fontWeight: FontWeight.w600);
-  static  final List<Widget> _widgetScreen = <Widget>[
+      TextStyle(fontSize: 30, fontWeight: FontWeight.w600);
+  static final List<Widget> _widgetScreen = <Widget>[
     const HiringScreen(),
     const Center(
       child: Text(
@@ -70,22 +71,26 @@ class _HomePageScreenState extends State<HomePageScreen> {
                 GButton(
                   icon: Icons.campaign,
                   text: 'Hiring',
-                  textStyle: AppTextStyle.cairoFontSimBold(fontSize: 20.sp, myColor: Colors.white),
+                  textStyle: AppTextStyle.cairoFontSimBold(
+                      fontSize: 20.sp, myColor: Colors.white),
                 ),
                 GButton(
                   icon: Icons.featured_play_list_sharp,
                   text: 'Cv',
-                  textStyle: AppTextStyle.cairoFontBold(fontSize: 20.sp, myColor: Colors.white),
+                  textStyle: AppTextStyle.cairoFontBold(
+                      fontSize: 20.sp, myColor: Colors.white),
                 ),
                 GButton(
                   icon: Icons.highlight_rounded,
                   text: 'Learing',
-                  textStyle: AppTextStyle.cairoFontSimBold(fontSize: 20.sp, myColor: Colors.white),
+                  textStyle: AppTextStyle.cairoFontSimBold(
+                      fontSize: 20.sp, myColor: Colors.white),
                 ),
                 GButton(
                   icon: Icons.person,
                   text: 'Profile',
-                  textStyle: AppTextStyle.cairoFontSimBold(fontSize: 20.sp, myColor: Colors.white),
+                  textStyle: AppTextStyle.cairoFontSimBold(
+                      fontSize: 20.sp, myColor: Colors.white),
                 ),
               ],
               selectedIndex: _selectedIndex,

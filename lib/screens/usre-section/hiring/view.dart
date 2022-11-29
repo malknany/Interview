@@ -6,16 +6,19 @@ import 'package:interview_project/screens/usre-section/hiring/controler.dart';
 import 'package:interview_project/screens/usre-section/hiring/widget/ad_container.dart';
 import 'package:interview_project/screens/usre-section/hiring/widget/bottom_sheet_item.dart';
 import 'package:interview_project/screens/usre-section/hiring/widget/searsh_item.dart';
+import 'package:interview_project/screens/usre-section/upload_photo/view.dart';
 
 class HiringScreen extends StatefulWidget {
-  const HiringScreen({Key? key}) : super(key: key);
+  const HiringScreen({
+    Key? key,
+  }) : super(key: key);
 
   @override
   State<HiringScreen> createState() => _HiringScreenState();
 }
 
 class _HiringScreenState extends State<HiringScreen> {
-  final HiringController controller = HiringController();
+  HiringController controller = HiringController();
 
   @override
   Widget build(BuildContext context) {
@@ -32,9 +35,20 @@ class _HiringScreenState extends State<HiringScreen> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      const CircleAvatar(
-                        backgroundImage:
-                            AssetImage('assets/image/profile_image.png'),
+                      Container(
+                        width: 50.w,
+                        height: 50.h,
+                        clipBehavior: Clip.antiAlias,
+                        decoration: BoxDecoration(
+                          color: AppColor.myDarkTeal,
+                          shape: BoxShape.circle,
+                        ),
+                        child: Center(
+                            child: StatefulBuilder(
+                                builder: (context, setState) => Image.file(
+                                      UpLoadPhotoScreen.imageSlecte!,
+                                      fit: BoxFit.fill,
+                                    ))),
                       ),
                       Icon(
                         Icons.notifications,
