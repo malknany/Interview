@@ -10,7 +10,7 @@ import 'package:interview_project/widget/item_button.dart';
 import '../../../widget/item_textformfield.dart';
 
 class LogInScreen extends StatefulWidget {
-  LogInScreen({Key? key}) : super(key: key);
+  const LogInScreen({Key? key}) : super(key: key);
 
   @override
   State<LogInScreen> createState() => _LogInScreenState();
@@ -38,11 +38,11 @@ class _LogInScreenState extends State<LogInScreen> {
                 SizedBox(
                   height: 30.8.h,
                 ),
-                ItemTextFormFiled(hintText:'enter your email'),
+                const ItemTextFormFiled(hintText: 'enter your email'),
                 SizedBox(
                   height: 35.h,
                 ),
-                ItemTextFormFiled(hintText: 'password'),
+                const ItemTextFormFiled(hintText: 'password'),
                 SizedBox(
                   height: 19.h,
                 ),
@@ -65,7 +65,7 @@ class _LogInScreenState extends State<LogInScreen> {
                       style: AppTextStyle.eBFontSemBold(
                           fontSize: 16, myColor: AppColor.textLoginColor),
                     ),
-                    Spacer(),
+                    const Spacer(),
                     Text(
                       'Forget password?',
                       style: AppTextStyle.eBFontSemBold(
@@ -76,7 +76,7 @@ class _LogInScreenState extends State<LogInScreen> {
                 SizedBox(
                   height: 30.h,
                 ),
-                ItemButtonWidget(text: 'Login', nextPage: SizedBox()),
+                const ItemButtonWidget(text: 'Login', nextPage: SizedBox()),
                 SizedBox(
                   height: 25.h,
                 ),
@@ -94,7 +94,7 @@ class _LogInScreenState extends State<LogInScreen> {
                     ),
                     GestureDetector(
                       onTap: () {
-                        navigateTo(context, SignUpScreen());
+                        navigateTo(context, const SignUpScreen());
                       },
                       child: Text(
                         'sign up',
@@ -112,7 +112,7 @@ class _LogInScreenState extends State<LogInScreen> {
                 SizedBox(
                   height: 24.h,
                 ),
-                TextInLine(),
+                const TextInLine(),
                 SizedBox(
                   height: 20.h,
                 ),

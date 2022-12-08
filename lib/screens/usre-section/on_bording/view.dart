@@ -39,7 +39,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
             children: [
               SizedBox(height: 23.h,),
               control.index == 2
-                  ? SizedBox.shrink()
+                  ? const SizedBox.shrink()
                   : Row(
                 children: [
                   const Spacer(),
@@ -90,7 +90,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                 ),
               ),
 
-              control.index == 2?SizedBox.shrink():SizedBox(
+              control.index == 2?const SizedBox.shrink():SizedBox(
                 width: 200.w,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -101,13 +101,13 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                         radius: 20.r,
                         backgroundColor: index == control.index
                             ? AppColor.myTeal
-                            : Color(0xffD2D5D6),
+                            : const Color(0xffD2D5D6),
                       ),),
                 ),
               ),
               SizedBox(height: 30.h),
               control.index == 2
-                  ? Expanded(child: ButtonWidget())
+                  ? const Expanded(child: ButtonWidget())
                   : const SizedBox.shrink(),
             ],
           ),

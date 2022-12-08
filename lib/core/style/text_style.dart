@@ -20,6 +20,7 @@ class AppTextStyle{
       fontSize: fontSize.sp,
       fontWeight: FontWeight.bold,
       fontFamily: AppStrings.fontCairo,
+
     );
   }
 
