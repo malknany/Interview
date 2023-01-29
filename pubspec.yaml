@@ -14,8 +14,15 @@ dependencies:
   flutter:
     sdk: flutter
   cupertino_icons: ^1.0.2
-  flutter_svg: ^1.1.6
+  # flutter_svg: ^1.1.6
   flutter_screenutil: ^5.5.4
+  file_picker: ^5.0.1
+  google_nav_bar: ^5.0.6
+  group_button: ^5.2.2
+  quickalert: ^1.0.0
+  flutter_rating_bar: ^4.0.1
+  youtube_player_flutter: ^8.1.1
+  flutter_cached_pdfview: ^0.4.1
 
 dev_dependencies:
   flutter_test:
@@ -36,6 +43,7 @@ flutter:
 
   assets:
     - assets/image/
+    - assets/PDFs/
 
   fonts:
     - family: Cario
@@ -47,6 +55,8 @@ flutter:
           weight: 800
     - family: EBGaramond
       fonts:
+        - asset: assets/fonts/eb/EBGaramond-Regular.ttf
+          weight: 500
         - asset: assets/fonts/eb/EBGaramond-Medium.ttf
           weight: 700
         - asset: assets/fonts/eb/EBGaramond-SemiBold.ttf

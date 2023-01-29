@@ -15,11 +15,15 @@ class SplashScreen extends StatefulWidget {
 class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
-    Timer(const Duration(seconds: 5), () {
-      navigateTo(context, const ChooseAccountScreen());
-    },);
+    Timer(
+      const Duration(seconds: 5),
+      () {
+        navigateTo(context, const ChooseAccountScreen());
+      },
+    );
     super.initState();
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,7 +31,11 @@ class _SplashScreenState extends State<SplashScreen> {
         child: Container(
           width: double.infinity,
           color: Colors.white,
-          child: Center(child: Image.asset('assets/image/logo.png',alignment: Alignment.center,)),
+          child: Center(
+              child: Image.asset(
+            'assets/image/logo.png',
+            alignment: Alignment.center,
+          )),
         ),
       ),
     );

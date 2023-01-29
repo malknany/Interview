@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../core/utils/app_color.dart';
 import '../../../../core/utils/app_strings.dart';
+
 class TextInLine extends StatelessWidget {
   const TextInLine({Key? key}) : super(key: key);
 

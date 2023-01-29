@@ -1,5 +1,5 @@
-const String pathName='assets/image';
+const String pathName = 'assets/image';
 
-class ImgAssets{
-  static String logo='$pathName/';
+class ImgAssets {
+  static String logo = '$pathName/';
 }
