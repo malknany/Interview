@@ -12,6 +12,4 @@ class AppColor {
   static Color textLoginColor = HexColor("#6B6363");
   static Color textColorGray = HexColor("#455A64");
   static Color textColorGrayOfEMType = HexColor("#455A64");
-  static Color textColorGrayOfTitle = HexColor("#5F717A");
-  static Color textColorGrayOfSubTitle = HexColor("#545D62");
 }
