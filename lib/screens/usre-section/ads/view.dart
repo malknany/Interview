@@ -15,7 +15,7 @@ class ADSScreen extends StatelessWidget {
   ADSScreen({Key? key}) : super(key: key);
   final controller = HiringController();
 
-  showAlert(context) {
+  static showAlert(context) {
     QuickAlert.show(
         context: context,
         type: QuickAlertType.confirm,

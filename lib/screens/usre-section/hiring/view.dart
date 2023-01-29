@@ -6,7 +6,7 @@ import 'package:interview_project/screens/usre-section/hiring/controler.dart';
 import 'package:interview_project/screens/usre-section/hiring/widget/ad_container.dart';
 import 'package:interview_project/screens/usre-section/hiring/widget/bottom_sheet_item.dart';
 import 'package:interview_project/screens/usre-section/hiring/widget/searsh_item.dart';
-import 'package:interview_project/screens/usre-section/upload_photo/view.dart';
+import 'package:interview_project/widget/item_photo_notifa_bar.dart';
 
 class HiringScreen extends StatefulWidget {
   const HiringScreen({
@@ -32,30 +32,7 @@ class _HiringScreenState extends State<HiringScreen> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Container(
-                        width: 50.w,
-                        height: 50.h,
-                        clipBehavior: Clip.antiAlias,
-                        decoration: BoxDecoration(
-                          color: AppColor.myDarkTeal,
-                          shape: BoxShape.circle,
-                        ),
-                        child: Center(
-                            child: StatefulBuilder(
-                                builder: (context, setState) => Image.file(
-                                      UpLoadPhotoScreen.imageSlecte!,
-                                      fit: BoxFit.fill,
-                                    ))),
-                      ),
-                      Icon(
-                        Icons.notifications,
-                        color: AppColor.myTeal,
-                      ),
-                    ],
-                  ),
+                  ItemBarCustom(),
                   Padding(
                     padding: EdgeInsets.symmetric(vertical: 12.0.h),
                     child: Text(
