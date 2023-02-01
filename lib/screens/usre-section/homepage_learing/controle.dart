@@ -8,8 +8,8 @@ class LearningController{
   bool isSlect=false;
   List<LearningModel> Learn=[
     LearningModel(image: 'assets/image/robot.png', subTitle: 'Virtual Interview Training',nextPage:Container() ),
-    LearningModel(image: 'assets/image/rafiki.png', subTitle: 'Videos Learning',nextPage:VideoLearningScreen() ),
+    LearningModel(image: 'assets/image/rafiki.png', subTitle: 'Videos Learning',nextPage:const VideoLearningScreen() ),
     LearningModel(image: 'assets/image/amico.png', subTitle: 'MCQ Training',nextPage: Container()),
-    LearningModel(image: 'assets/image/cuate.png', subTitle: 'Documents Learning',nextPage: DocumentScreen()),
+    LearningModel(image: 'assets/image/cuate.png', subTitle: 'Documents Learning',nextPage: const DocumentScreen()),
   ];
 }

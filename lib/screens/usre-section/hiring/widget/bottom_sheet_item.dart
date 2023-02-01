@@ -31,7 +31,7 @@ class _ShowBottomSheetScreenState extends State<ShowBottomSheetScreen> {
                   padding: EdgeInsets.only(left: 25.0.w, right: 130.w),
                   child: InkWell(
                     onTap: () => Navigator.pop(context),
-                    child: Icon(
+                    child: const Icon(
                       Icons.clear,
                       color: Colors.white,
                     ),
@@ -89,7 +89,7 @@ class _ShowBottomSheetScreenState extends State<ShowBottomSheetScreen> {
                             border: Border.all(
                               color: AppColor.myTeal,
                               width: 1.w,
-                              strokeAlign: StrokeAlign.inside,
+                              strokeAlign: BorderSide.strokeAlignInside
                             ),
                           ),
                           child: Center(
@@ -159,7 +159,7 @@ class _ShowBottomSheetScreenState extends State<ShowBottomSheetScreen> {
                             border: Border.all(
                               color: AppColor.myTeal,
                               width: 1.w,
-                              strokeAlign: StrokeAlign.inside,
+                              strokeAlign: BorderSide.strokeAlignInside
                             ),
                           ),
                           child: Center(

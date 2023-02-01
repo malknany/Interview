@@ -74,7 +74,7 @@ class _HiringScreenState extends State<HiringScreen> {
                             border: Border.all(
                                 color: AppColor.myTeal,
                                 width: 1.w,
-                                strokeAlign: StrokeAlign.inside),
+                                strokeAlign: BorderSide.strokeAlignInside),
                           ),
                           child: Center(
                             child: ImageIcon(

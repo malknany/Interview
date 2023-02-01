@@ -30,11 +30,11 @@ class _VideoFromYouTubeState extends State<VideoFromYouTube> {
     id2 = YoutubePlayer.convertUrlToId(url2)!;
     _controller = YoutubePlayerController(
       initialVideoId: id,
-      flags: YoutubePlayerFlags(autoPlay: false),
+      flags: const YoutubePlayerFlags(autoPlay: false),
     );
     _controller2 = YoutubePlayerController(
       initialVideoId: id2,
-      flags: YoutubePlayerFlags(autoPlay: false),
+      flags: const YoutubePlayerFlags(autoPlay: false),
     );
     youtubePlayer = YoutubePlayer(
       controller: _controller,
@@ -131,7 +131,7 @@ class _VideoFromYouTubeState extends State<VideoFromYouTube> {
                           fontSize: 16.sp, myColor: AppColor.myTeal)),
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               SizedBox(
@@ -143,7 +143,7 @@ class _VideoFromYouTubeState extends State<VideoFromYouTube> {
                 'Tell me about yourself! introduce yourself in \n english with EASE!\n mmmEnglish.2.6M Viewes .1 Year Ago',
                 style: TextStyle(fontSize: 18.sp, color: AppColor.textColorGrayOfSubTitle),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               SizedBox(

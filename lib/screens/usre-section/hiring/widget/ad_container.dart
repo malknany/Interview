@@ -26,7 +26,7 @@ class ADContainer extends StatelessWidget {
             border: Border.all(
               color: AppColor.myTeal,
               width: 1.w,
-              strokeAlign: StrokeAlign.inside,
+              strokeAlign: BorderSide.strokeAlignInside
             ),
             borderRadius: BorderRadius.circular(10.r),
             boxShadow: [

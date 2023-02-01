@@ -16,7 +16,7 @@ class ProfileScreen extends StatefulWidget {
 }
 
 class _ProfileScreenState extends State<ProfileScreen> {
-  ProfileController _profileController = ProfileController();
+  final ProfileController _profileController = ProfileController();
 
   @override
   Widget build(BuildContext context) {
@@ -29,21 +29,21 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 //crossAxisAlignment: CrossAxisAlignment.end,
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
-                  Spacer(),
+                  const Spacer(),
                   Expanded(
                     child: Text('Profile',
                         style: AppTextStyle.cairoFontBold(
                             fontSize: 28.sp, myColor: Colors.black,),),
                   ),
                   IconButton(icon: Icon(Icons.edit,color: AppColor.myTeal),onPressed: (){
-                    navigateTo(context, ProfileEditeScreen());
+                    navigateTo(context, const ProfileEditeScreen());
                   },),
                 ],
               ),
               UpLoadPhotoScreen.imageSlecte == null
                   ? CircleAvatar(
                 maxRadius: 50.r,
-                      backgroundImage: AssetImage('assets/image/profile_image.png'),
+                      backgroundImage: const AssetImage('assets/image/profile_image.png'),
                     )
                   : Container(
                       width: 50.w,
@@ -79,7 +79,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   children: List.generate(
                     _profileController.data.skills.length,
                     (index) => Container(
-                      padding: EdgeInsets.all(6),
+                      padding: const EdgeInsets.all(6),
                       height: 45.h,
                       // width: 146.w,
                       decoration: BoxDecoration(
@@ -112,7 +112,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     ),
                     leading: Icon(Icons.email, color: AppColor.myTeal, size: 32.sm),
                   ),
-                  Divider(
+                  const Divider(
                     color: Color(0xffE0E0E0),
                   ),
                   ListTile(
@@ -127,7 +127,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     leading: Icon(Icons.phone_android,
                         color: AppColor.myTeal, size: 32.sm),
                   ),
-                  Divider(
+                  const Divider(
                     color: Color(0xffE0E0E0),
                   ),
                   ListTile(

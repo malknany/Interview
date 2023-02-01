@@ -33,7 +33,7 @@ class OverViewItems extends StatelessWidget {
             border: Border.all(
               color: const Color(0xffE0E0E0),
               width: 1.w,
-              strokeAlign: StrokeAlign.inside,
+              strokeAlign: BorderSide.strokeAlignInside,
             ),
           ),
           child: Center(

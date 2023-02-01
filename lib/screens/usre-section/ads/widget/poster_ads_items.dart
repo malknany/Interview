@@ -31,7 +31,7 @@ class PosterADS extends StatelessWidget {
                 border: Border.all(
                   color: const Color(0xffE0E0E0),
                   width: 1.w,
-                  strokeAlign: StrokeAlign.inside,
+                  strokeAlign: BorderSide.strokeAlignInside,
                 ),
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(20.r),
@@ -100,7 +100,7 @@ class PosterADS extends StatelessWidget {
                 border: Border.all(
                   color: const Color(0xffE0E0E0),
                   width: 1.w,
-                  strokeAlign: StrokeAlign.inside,
+                  strokeAlign: BorderSide.strokeAlignInside
                 ),
                 color: Colors.white,
                 shape: BoxShape.circle,

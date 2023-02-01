@@ -3,9 +3,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:interview_project/core/style/text_style.dart';
 import 'package:interview_project/core/utils/app_color.dart';
+import 'package:interview_project/screens/usre-section/homepage/widgets/drawer_Item.dart';
 import 'package:interview_project/screens/usre-section/homepage_learing/view.dart';
-import 'package:interview_project/screens/usre-section/profile/controle.dart';
-import 'package:interview_project/screens/usre-section/upload_photo/view.dart';
 import 'package:interview_project/widget/item_photo_notifa_bar.dart';
 
 import '../hiring/view.dart';
@@ -20,10 +19,9 @@ class HomePageScreen extends StatefulWidget {
 
 class _HomePageScreenState extends State<HomePageScreen> {
   //GlobalKey<ScaffoldState> _globalKey =GlobalKey<ScaffoldState>();
-  ProfileController _profileController = ProfileController();
   static const TextStyle optionStyle =
       TextStyle(fontSize: 30, fontWeight: FontWeight.w600);
-  static final List<Widget> _widgetScreen = <Widget>[
+   final List<Widget> _widgetScreen = <Widget>[
     const HiringScreen(),
     const Center(
       child: Text(
@@ -31,8 +29,8 @@ class _HomePageScreenState extends State<HomePageScreen> {
         style: optionStyle,
       ),
     ),
-    HomePageLearningScreen(),
-    ProfileScreen()
+    const HomePageLearningScreen(),
+    const ProfileScreen()
   ];
 
   int _selectedIndex = 0;
@@ -102,153 +100,7 @@ class _HomePageScreenState extends State<HomePageScreen> {
         ),
       ),
       drawer: Drawer(
-        child: ListView(
-          // Important: Remove any padding from the ListView.
-          padding: EdgeInsets.zero,
-          children: [
-            //UserAccountsDrawerHeader(accountName: accountName, accountEmail: accountEmail),
-            DrawerHeader(
-              decoration: BoxDecoration(
-                color: AppColor.myTeal,
-              ),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Container(
-                    width: 50.w,
-                    height: 50.h,
-                    clipBehavior: Clip.antiAlias,
-                    decoration: BoxDecoration(
-                      color: AppColor.myDarkTeal,
-                      shape: BoxShape.circle,
-                    ),
-                    child: Center(
-                      child: UpLoadPhotoScreen.imageSlecte == null
-                          ? CircleAvatar(
-                        backgroundImage: AssetImage(
-                            'assets/image/profile_image.png'),
-                      )
-                          : Image.file(
-                        UpLoadPhotoScreen.imageSlecte!,
-                        fit: BoxFit.fill,
-                      ),
-                    ),
-                  ),
-                  Text(_profileController.data.name,
-                      style: AppTextStyle.cairoFontBold(
-                          fontSize: 20.sp,
-                          myColor: AppColor.textColorGray)),
-                  Text(_profileController.data.nameJob,
-                      style: AppTextStyle.eBFontRegular(
-                          fontSize: 20.sp,
-                          myColor: Colors.white)),
-                ],
-              ),
-            ),
-            ListTile(
-              leading: Icon(
-                Icons.person,
-                color: AppColor.myTeal,
-              ),
-              title: Text(
-                'Profile',
-                style: AppTextStyle.cairoFontSimBold(
-                    fontSize: 24.sp, myColor: AppColor.textColorGray),
-              ),
-              onTap: () {},
-            ),
-            ListTile(
-              leading: Icon(
-                Icons.notifications,
-                color: AppColor.myTeal,
-              ),
-              title: Text(
-                'Notifications',
-                style: AppTextStyle.cairoFontSimBold(
-                    fontSize: 24.sp, myColor: AppColor.textColorGray),
-              ),
-              onTap: () {},
-            ),
-            ListTile(
-              leading: Icon(
-                Icons.edit_note,
-                color: AppColor.myTeal,
-              ),
-              title: Text(
-                'Edit Your CV',
-                style: AppTextStyle.cairoFontSimBold(
-                    fontSize: 24.sp, myColor: AppColor.textColorGray),
-              ),
-              onTap: () {},
-            ),
-            ListTile(
-              leading: Icon(
-                Icons.mark_email_unread,
-                color: AppColor.myTeal,
-              ),
-              title: Text(
-                'Messages',
-                style: AppTextStyle.cairoFontSimBold(
-                    fontSize: 24.sp, myColor: AppColor.textColorGray),
-              ),
-              onTap: () {},
-            ),
-            ListTile(
-              leading: Icon(
-                Icons.bookmark_outlined,
-                color: AppColor.myTeal,
-              ),
-              title: Text(
-                'Saved',
-                style: AppTextStyle.cairoFontSimBold(
-                    fontSize: 24.sp, myColor: AppColor.textColorGray),
-              ),
-              onTap: () {},
-            ),
-            ListTile(
-              leading: Icon(
-                Icons.logout,
-                color: AppColor.myTeal,
-              ),
-              title: Text(
-                'Log out',
-                style: AppTextStyle.cairoFontSimBold(
-                    fontSize: 24.sp, myColor: AppColor.textColorGray),
-              ),
-              onTap: () {},
-            ),
-            SizedBox(height: 60.h,),
-            Divider(
-              color: Color(0xffE0E0E0),
-              height: 2.h,
-              thickness: 2.h,
-            ),
-            ListTile(
-              leading: Icon(
-                Icons.share,
-                color: AppColor.myTeal,
-              ),
-              title: Text(
-                'Tell a Friends',
-                style: AppTextStyle.cairoFontSimBold(
-                    fontSize: 24.sp, myColor: AppColor.textColorGray),
-              ),
-              onTap: () {},
-            ),
-            ListTile(
-              leading: Icon(
-                Icons.phone,
-                color: AppColor.myTeal,
-              ),
-              title: Text(
-                'Contact Us',
-                style: AppTextStyle.cairoFontSimBold(
-                    fontSize: 24.sp, myColor: AppColor.textColorGray),
-              ),
-              onTap: () {},
-            ),
-          ],
-        ),
+        child: ItemDrawer(),
       ),
     );
   }

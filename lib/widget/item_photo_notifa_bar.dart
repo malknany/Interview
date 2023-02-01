@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:interview_project/core/style/text_style.dart';
 import 'package:interview_project/core/utils/app_color.dart';
 import 'package:interview_project/screens/usre-section/profile/controle.dart';
 
@@ -8,7 +7,7 @@ import '../screens/usre-section/upload_photo/view.dart';
 
 class ItemBarCustom extends StatelessWidget {
   ItemBarCustom({Key? key}) : super(key: key);
-  ProfileController _profileController = ProfileController();
+  final ProfileController _profileController = ProfileController();
   static GlobalKey<ScaffoldState> globalKey =GlobalKey<ScaffoldState>();
   @override
   Widget build(BuildContext context) {
@@ -29,7 +28,7 @@ class ItemBarCustom extends StatelessWidget {
             ),
             child: Center(
               child: UpLoadPhotoScreen.imageSlecte == null
-                  ? CircleAvatar(
+                  ? const CircleAvatar(
                       backgroundImage:
                           AssetImage('assets/image/profile_image.png'),
                     )

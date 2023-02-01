@@ -34,13 +34,22 @@ class _DocumentScreenState extends State<DocumentScreen> {
               ],
             ),
           ),
-          ItemListTile(title: 'Mohamed Resume without photo', subTitle: '45 kb', path: 'assets/PDFs/Mohmed Resume without photo.pdf'),
-          ItemListTile(title: 'Mohamed Resume with photo', subTitle: '73 kb', path: 'assets/PDFs/Mohmed Resume with photo.pdf'),
-          ItemListTile(title: 'Selected Topics', subTitle: '120 kb', path: 'assets/PDFs/Selected_Topics.pdf'),
+          ItemListTile(
+              title: 'web-developer-interview-questions',
+              subTitle: '26 kb',
+              path: 'assets/PDFs/web-developer-interview-questions.pdf'),
+          ItemListTile(
+              title: 'CSS', subTitle: '561 kb', path: 'assets/PDFs/CSS.pdf'),
+          ItemListTile(
+              title: 'HTML', subTitle: '837 kb', path: 'assets/PDFs/HTML.pdf'),
+          ItemListTile(
+              title: 'Node.js',
+              subTitle: '774 kb',
+              path: 'assets/PDFs/Node.js.pdf'),
+          ItemListTile(
+              title: 'React', subTitle: '1 mb', path: 'assets/PDFs/React .pdf'),
         ],
       ),
     );
   }
 }
-
-

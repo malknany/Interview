@@ -52,7 +52,7 @@ class _ProfileEditeScreenState extends State<ProfileEditeScreen> {
         ],
       ),
       body: SingleChildScrollView(
-        child: Container(
+        child: SizedBox(
           width: double.infinity,
           child: Column(
             children: [
@@ -62,7 +62,7 @@ class _ProfileEditeScreenState extends State<ProfileEditeScreen> {
                       child: CircleAvatar(
                         maxRadius: 40.r,
                         backgroundImage:
-                            AssetImage('assets/image/profile_image.png'),
+                            const AssetImage('assets/image/profile_image.png'),
                       ),
                     )
                   : InkWell(

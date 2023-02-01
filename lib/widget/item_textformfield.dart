@@ -26,13 +26,13 @@ class ItemTextFormFiled extends StatelessWidget {
             focusedBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(2.r),
                 borderSide: BorderSide(
-                    strokeAlign: StrokeAlign.inside,
+                    strokeAlign: BorderSide.strokeAlignInside,
                     width: 1.w,
                     color: AppColor.myTeal)),
             enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(10.r),
                 borderSide: BorderSide(
-                    strokeAlign: StrokeAlign.inside,
+                    strokeAlign: BorderSide.strokeAlignInside,
                     width: 1.w,
                     color: AppColor.borderTextFiled)),
             filled: true,

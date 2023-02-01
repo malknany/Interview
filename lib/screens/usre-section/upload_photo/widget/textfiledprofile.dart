@@ -14,12 +14,12 @@ class TextFiledProfile extends StatelessWidget {
       margin: EdgeInsets.symmetric(horizontal: 26.w, vertical: 17.5.h),
       height: 49.h,
       decoration: BoxDecoration(
-        border: Border.all(width: 2,color: Color(0xffE0E0E0),),
+        border: Border.all(width: 2,color: const Color(0xffE0E0E0),),
         borderRadius: BorderRadius.circular(10.r),
-        boxShadow: [
+        boxShadow: const [
           BoxShadow(
             color: Color(0xffE0E0E0),
-            offset: const Offset(2, 4),
+            offset: Offset(2, 4),
             blurRadius: 2,
           ),
         ],

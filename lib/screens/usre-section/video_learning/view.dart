@@ -7,7 +7,7 @@ import 'package:interview_project/screens/usre-section/mcq/view.dart';
 import 'package:interview_project/screens/usre-section/video_learning/widget/view.dart';
 
 class VideoLearningScreen extends StatefulWidget {
-  VideoLearningScreen({Key? key}) : super(key: key);
+  const VideoLearningScreen({Key? key}) : super(key: key);
 
   @override
   State<VideoLearningScreen> createState() => _VideoLearningScreenState();
@@ -53,7 +53,7 @@ class _VideoLearningScreenState extends State<VideoLearningScreen> {
                       color: AppColor.myTeal,),
                   labelStyle: AppTextStyle.cairoFontMedium(
                       fontSize: 18.sp, myColor: AppColor.myDarkTeal,),
-                  tabs:  [
+                  tabs:  const [
                     Tab(
                       text: 'Virtual Interview Training',
                     ),
@@ -84,7 +84,7 @@ class _VideoLearningScreenState extends State<VideoLearningScreen> {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          VideoFromYouTube(),
+                          const VideoFromYouTube(),
                           //ADSScreen.showAlert(context),
                           SizedBox(
                             height: 20.h,
@@ -96,7 +96,7 @@ class _VideoLearningScreenState extends State<VideoLearningScreen> {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          MCQScreen(),
+                          const MCQScreen(),
                           SizedBox(
                             height: 20.h,
                           ),
@@ -107,7 +107,7 @@ class _VideoLearningScreenState extends State<VideoLearningScreen> {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          DocumentScreen(),
+                          const DocumentScreen(),
                           SizedBox(
                             height: 20.h,
                           ),

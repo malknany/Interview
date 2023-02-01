@@ -41,14 +41,14 @@ class BottomSheetFeedBack extends StatelessWidget {
                 direction: Axis.horizontal,
                 allowHalfRating: true,
                 itemCount: 5,
-                itemPadding: EdgeInsets.symmetric(
+                itemPadding: const EdgeInsets.symmetric(
                   horizontal: 4.0,
                 ),
                 itemBuilder: (context, _) => Icon(
                   Icons.star,
                   color: AppColor.myTeal,
                 ),
-                unratedColor: Color(0xffC7C5C5),
+                unratedColor: const Color(0xffC7C5C5),
                 onRatingUpdate: (rating) {
                   print(rating);
                 },
@@ -81,7 +81,7 @@ class BottomSheetFeedBack extends StatelessWidget {
                       focusedBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(2.r),
                         borderSide: BorderSide(
-                          strokeAlign: StrokeAlign.inside,
+                          strokeAlign: BorderSide.strokeAlignInside,
                           width: 1.w,
                           color: AppColor.myTeal,
                         ),
@@ -89,7 +89,7 @@ class BottomSheetFeedBack extends StatelessWidget {
                       enabledBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(10.r),
                           borderSide: BorderSide(
-                              strokeAlign: StrokeAlign.inside,
+                              strokeAlign: BorderSide.strokeAlignInside,
                               width: 1.w,
                               color: AppColor.borderTextFiled)),
                       filled: true,
@@ -105,17 +105,17 @@ class BottomSheetFeedBack extends StatelessWidget {
                 padding: EdgeInsets.symmetric(vertical: 32.0.h),
                 child: ElevatedButton(
                   onPressed: () {},
-                  child: Text(
-                    'Submit',
-                    style: AppTextStyle.eBFontRegular(
-                        fontSize: 28.sp, myColor: Colors.white),
-                  ),
                   style: ElevatedButton.styleFrom(
                     fixedSize: Size(189.w, 48.h),
                     backgroundColor: AppColor.myTeal,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10.r),
                     ),
+                  ),
+                  child: Text(
+                    'Submit',
+                    style: AppTextStyle.eBFontRegular(
+                        fontSize: 28.sp, myColor: Colors.white),
                   ),
                 ),
               )

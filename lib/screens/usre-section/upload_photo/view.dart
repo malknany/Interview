@@ -12,7 +12,7 @@ import '../../../core/utils/app_color.dart';
 import '../homepage/view.dart';
 
 class UpLoadPhotoScreen extends StatefulWidget {
-  UpLoadPhotoScreen({Key? key}) : super(key: key);
+  const UpLoadPhotoScreen({Key? key}) : super(key: key);
   static File? imageSlecte;
 
   @override
@@ -26,7 +26,7 @@ class _UpLoadPhotoScreenState extends State<UpLoadPhotoScreen> {
     final result = await FilePicker.platform.pickFiles(type: FileType.image);
     if (result != null) {
       UpLoadPhotoScreen.imageSlecte = File(result.files.single.path!);
-      navigateTo(context, HomePageScreen());
+      navigateTo(context, const HomePageScreen());
       setState(() {});
     }
   }

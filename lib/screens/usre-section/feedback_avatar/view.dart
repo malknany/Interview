@@ -45,9 +45,9 @@ class FeedBackScreen extends StatelessWidget {
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(10.r),
                     border: Border.all(
-                      color: Color(0xffBEBEBE),
+                      color: const Color(0xffBEBEBE),
                       width: 1.w,
-                      strokeAlign: StrokeAlign.inside,
+                      strokeAlign: BorderSide.strokeAlignInside
                     ),
                     boxShadow: [
                       BoxShadow(
@@ -88,20 +88,20 @@ class FeedBackScreen extends StatelessWidget {
                               context: context,
                               builder: (context) => StatefulBuilder(
                                   builder: (context, setState) =>
-                                      BottomSheetFeedBack()),
+                                      const BottomSheetFeedBack()),
                             );
                           },
-                          child: Text(
-                            'Give FeedBack',
-                            style: AppTextStyle.cairoFontSimBold(
-                                fontSize: 19.sp, myColor: Colors.white),
-                          ),
                           style: ElevatedButton.styleFrom(
                             backgroundColor: AppColor.myDarkTeal,
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(10.r),
                             ),
                             fixedSize: Size(137.w, 55.h),
+                          ),
+                          child: Text(
+                            'Give FeedBack',
+                            style: AppTextStyle.cairoFontSimBold(
+                                fontSize: 19.sp, myColor: Colors.white),
                           ),
                         ),
                       ),

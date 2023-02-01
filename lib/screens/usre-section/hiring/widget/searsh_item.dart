@@ -31,7 +31,7 @@ class SearchItem extends StatelessWidget {
           borderSide: BorderSide(
             color: AppColor.myTeal,
             width: 1.w,
-            strokeAlign: StrokeAlign.inside,
+            strokeAlign: BorderSide.strokeAlignInside,
           ),
         ),
         enabledBorder: OutlineInputBorder(
@@ -39,7 +39,7 @@ class SearchItem extends StatelessWidget {
           borderSide: BorderSide(
             color: AppColor.myTeal,
             width: 1.w,
-            strokeAlign: StrokeAlign.inside,
+            strokeAlign: BorderSide.strokeAlignInside,
           ),
         ),
       ),

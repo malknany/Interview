@@ -3,12 +3,16 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:interview_project/core/app-rout/navigate.dart';
 import 'package:interview_project/core/style/text_style.dart';
 import 'package:interview_project/core/utils/app_color.dart';
-import 'package:interview_project/screens/usre-section/video_learning/view.dart';
+import 'package:interview_project/screens/usre-section/homepage/view.dart';
+import 'package:interview_project/screens/usre-section/mcq/controlle.dart';
+import 'package:interview_project/screens/usre-section/mcq/widget/item_ressult.dart';
 import 'package:interview_project/widget/item_button.dart';
 
 class ResultScreen extends StatelessWidget {
-  ResultScreen({Key? key, required this.score}) : super(key: key);
-  int score;
+  ResultScreen({Key? key, required this.score, required this.quiz})
+      : super(key: key);
+  int score, quiz;
+  final QuestionControl _control = QuestionControl();
 
   @override
   Widget build(BuildContext context) {
@@ -39,7 +43,8 @@ class ResultScreen extends StatelessWidget {
                   height: 24.h,
                 ),
                 Image.asset('assets/image/result.png'),
-                Text('${(score / 10) * 100}%',
+                Text(
+                    '${((score / _control.questionLength(quiz)) * 100).floor()}%',
                     style: AppTextStyle.cairoFontBold(
                         fontSize: 36.sp, myColor: AppColor.myDarkTeal)),
                 SizedBox(
@@ -48,87 +53,30 @@ class ResultScreen extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Container(
-                      padding: EdgeInsets.all(14),
-                      decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                        color: Colors.white,
-                        border: Border.all(
-                          color: Color(0xff969595),
-                        ),
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.grey.withOpacity(0.25),
-                            offset: const Offset(4, 8),
-                            blurRadius: 4,
-                          ),
-                        ],
-                      ),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Text('Total',style:AppTextStyle.eBFontBold(fontSize: 20.sp, myColor: AppColor.myTeal),),
-                          SizedBox(height: 2.h,),
-                          Text('10',style:AppTextStyle.eBFontBold(fontSize: 20.sp, myColor: AppColor.myTeal),),
-                        ],
-                      ),
-                    ),
-                    Container(
-                      padding: EdgeInsets.all(12),
-                      decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                        color: Colors.white,
-                        border: Border.all(
-                          color: Color(0xff969595),
-                        ),
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.grey.withOpacity(0.25),
-                            offset: const Offset(4, 8),
-                            blurRadius: 4,
-                          ),
-                        ],
-                      ),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Text('Right',style:AppTextStyle.eBFontBold(fontSize: 20.sp, myColor: AppColor.myTeal),),
-                          SizedBox(height: 5.h,),
-                          Text('$score',style:AppTextStyle.eBFontBold(fontSize: 20.sp, myColor: AppColor.myTeal),),
-                        ],
-                      ),
-                    ),
-                    Container(
-                      padding: EdgeInsets.all(10),
-                      decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                        color: Colors.white,
-                        border: Border.all(
-                          color: Color(0xff969595),
-                        ),
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.grey.withOpacity(0.25),
-                            offset: const Offset(4, 8),
-                            blurRadius: 4,
-                          ),
-                        ],
-                      ),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Text('Wrong',style:AppTextStyle.eBFontBold(fontSize: 20.sp, myColor: AppColor.myTeal),),
-                          SizedBox(height: 5.h,),
-                          Text('${10-score}',style:AppTextStyle.eBFontBold(fontSize: 20.sp, myColor: AppColor.myTeal),),
-                        ],
-                      ),
-                    ),
+                    ItemContainer(
+                        padding: 14,
+                        title: 'Total',
+                        numberResult: '${_control.questionLength(quiz)}'),
+                    ItemContainer(
+                        padding: 12,
+                        title: 'Right',
+                        numberResult: '$score'),
+                    ItemContainer(
+                        padding: 10,
+                        title: 'Wrong',
+                        numberResult:
+                            '${_control.questionLength(quiz) - score}'),
                   ],
                 ),
-                SizedBox(height: 40.h,),
-                ItemButtonWidget(text: 'Finish', nextPage: (){
-                  navigateToAndRemove(context, page: VideoLearningScreen());
-                })
+                SizedBox(
+                  height: 40.h,
+                ),
+                ItemButtonWidget(
+                    text: 'Finish',
+                    nextPage: () {
+                      navigateToAndRemove(context,
+                          page: const HomePageScreen(), withHistory: true);
+                    })
               ],
             ),
           ),

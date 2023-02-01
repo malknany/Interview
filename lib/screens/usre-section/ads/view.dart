@@ -20,7 +20,7 @@ class ADSScreen extends StatelessWidget {
         context: context,
         type: QuickAlertType.confirm,
         borderRadius: 50.r,
-        onConfirmBtnTap: () => navigateTo(context, AvatarScreen()),
+        onConfirmBtnTap: () => navigateTo(context, const AvatarScreen()),
         onCancelBtnTap: () => Navigator.pop(context),
         title: 'Virtual Interview',
         cancelBtnText: 'Cancel',

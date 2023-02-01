@@ -40,13 +40,13 @@ class AvatarScreen extends StatelessWidget {
               //   ),
               // ),
               TweenAnimationBuilder<Duration>(
-                  duration: Duration(minutes: 1),
-                  tween: Tween(begin: Duration(minutes: 1), end: Duration.zero),
+                  duration: const Duration(minutes: 1),
+                  tween: Tween(begin: const Duration(minutes: 1), end: Duration.zero),
                   onEnd: () {
                     print('Timer ended');
                     navigateTo(
                       context,
-                      FeedBackScreen(),
+                      const FeedBackScreen(),
                     );
                   },
                   builder:
@@ -91,7 +91,7 @@ class AvatarScreen extends StatelessWidget {
                             showCancelBtn: true,
                             borderRadius: 50.r,
                             onConfirmBtnTap: () => navigateToAndRemove(context,
-                                page: HomePageScreen(), withHistory: false),
+                                page: const HomePageScreen(), withHistory: false),
                             onCancelBtnTap: () => Navigator.pop(context),
                             cancelBtnText: 'No',
                             cancelBtnTextStyle: TextStyle(

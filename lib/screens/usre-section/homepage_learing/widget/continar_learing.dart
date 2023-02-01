@@ -14,7 +14,7 @@ class CustomContainerOfLearning extends StatelessWidget {
       runSpacing: 29.h,
       children: List.generate(controller.Learn.length, (index) => GestureDetector(
         onTap:(){
-          navigateTo(context, controller.Learn[index].nextPage??SizedBox());
+          navigateTo(context, controller.Learn[index].nextPage??const SizedBox());
         },
         child: Container(
           height: 240.h,
@@ -23,9 +23,9 @@ class CustomContainerOfLearning extends StatelessWidget {
             color: Colors.white,
             borderRadius: BorderRadius.circular(10.r),
             border: Border.all(
-              color: Color(0xffE0E0E0),
+              color: const Color(0xffE0E0E0),
               width: 1.w,
-              strokeAlign: StrokeAlign.inside
+              strokeAlign: BorderSide.strokeAlignInside
             ),
             boxShadow: [
               BoxShadow(
