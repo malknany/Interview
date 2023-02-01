@@ -75,6 +75,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     height: 12.h,
                   ),
                   //ItemTextFormFiled(hintText: 'Gender'),
+
+                  // ItemTextFormFiled(hintText: 'Gender'),
                   const ItemDropDownWidget(),
                   SizedBox(
                     height: 12.h,

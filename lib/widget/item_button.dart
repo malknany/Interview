@@ -4,10 +4,13 @@ import 'package:interview_project/core/app-rout/navigate.dart';
 import 'package:interview_project/core/style/text_style.dart';
 
 import '../core/utils/app_color.dart';
+
 class ItemButtonWidget extends StatelessWidget {
-  const ItemButtonWidget({Key? key,required this.text,required this.nextPage}) : super(key: key);
+  const ItemButtonWidget({Key? key, required this.text, required this.nextPage})
+      : super(key: key);
   final String text;
   final Widget nextPage;
+
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
@@ -22,7 +25,8 @@ class ItemButtonWidget extends StatelessWidget {
           )),
       child: Text(
         text,
-        style: AppTextStyle.cairoFontSimBold(fontSize: 36,myColor: Colors.white),
+        style:
+            AppTextStyle.cairoFontSimBold(fontSize: 32, myColor: Colors.white),
       ),
     );
   }

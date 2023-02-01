@@ -19,5 +19,6 @@ class ControllerOnBoarding {
       title: 'Learning Section',
       subTitle: 'You can practice with us on how to deal with the avatar and see some videos and books that will help you succeed in the interview.',
     ),
+
   ];
 }

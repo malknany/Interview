@@ -10,4 +10,5 @@ static  Color myTeal= HexColor("#0C948D");
  static Color textFiledColor= HexColor("#8C8C8C");
  static Color textLoginColor= HexColor("#6B6363");
  static Color textColorGray= HexColor("#455A64");
+ static Color circularContainer=HexColor("#DBDBDB");
 }

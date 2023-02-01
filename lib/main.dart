@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:interview_project/core/utils/app_strings.dart';
 import 'package:interview_project/screens/splash/view.dart';
+import 'package:interview_project/screens/forget_password/view.dart';
 
 import 'core/app-rout/navigate.dart';
 import 'core/style/app_theme.dart';
@@ -18,7 +19,8 @@ void main(){
        home: child,
      ),
       // splash in main
-      child: const SplashScreen(),
+      //child: const SplashScreen(),
+      child: const ForgetPasswordScreen(),
     ),
     );
 }

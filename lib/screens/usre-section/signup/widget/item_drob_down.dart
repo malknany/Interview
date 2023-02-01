@@ -31,7 +31,7 @@ class _ItemDropDownWidgetState extends State<ItemDropDownWidget> {
           focusedBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(10.r),
               borderSide: BorderSide(
-                  strokeAlign: StrokeAlign.inside,
+                  strokeAlign: BorderSide.strokeAlignInside,
                   width: 1.w,
                   color: AppColor.borderTextFiled)),
           contentPadding: EdgeInsets.only(left: 30.w, top: 15.h, bottom: 15.h,right: 22.w),
@@ -41,7 +41,7 @@ class _ItemDropDownWidgetState extends State<ItemDropDownWidget> {
           enabledBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(10.r),
               borderSide: BorderSide(
-                  strokeAlign: StrokeAlign.inside,
+                  strokeAlign: BorderSide.strokeAlignInside,
                   width: 1.w,
                   color: AppColor.borderTextFiled)),
           filled: true,
