@@ -25,28 +25,28 @@ class _DocumentScreenState extends State<DocumentScreen> {
               children: [
                 Text('Recent Files',
                     style: AppTextStyle.cairoFontMedium(
-                        fontSize: 24.sp, myColor: AppColor.myTeal)),
+                        fontSize: 2, myColor: AppColor.myTeal)),
                 Text(
                   'View All',
                   style: AppTextStyle.cairoFontSimBold(
-                      fontSize: 16.sp, myColor: AppColor.myTeal),
+                      fontSize: 16, myColor: AppColor.myTeal),
                 ),
               ],
             ),
           ),
-          ItemListTile(
+          const ItemListTile(
               title: 'web-developer-interview-questions',
               subTitle: '26 kb',
               path: 'assets/PDFs/web-developer-interview-questions.pdf'),
-          ItemListTile(
+          const ItemListTile(
               title: 'CSS', subTitle: '561 kb', path: 'assets/PDFs/CSS.pdf'),
-          ItemListTile(
+          const ItemListTile(
               title: 'HTML', subTitle: '837 kb', path: 'assets/PDFs/HTML.pdf'),
-          ItemListTile(
+          const ItemListTile(
               title: 'Node.js',
               subTitle: '774 kb',
               path: 'assets/PDFs/Node.js.pdf'),
-          ItemListTile(
+          const ItemListTile(
               title: 'React', subTitle: '1 mb', path: 'assets/PDFs/React .pdf'),
         ],
       ),

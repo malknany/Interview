@@ -8,8 +8,8 @@ import 'package:interview_project/screens/usre-section/mcq/result.dart';
 import 'package:interview_project/widget/item_button.dart';
 
 class QuizFlutter extends StatefulWidget {
-  QuizFlutter({Key? key, required this.quiz}) : super(key: key);
-  int quiz;
+ const QuizFlutter({Key? key, required this.quiz}) : super(key: key);
+  final int quiz;
 
   @override
   State<QuizFlutter> createState() => _QuizFlutterState();
@@ -64,7 +64,7 @@ class _QuizFlutterState extends State<QuizFlutter> {
                     Text(
                       ' ${index + 1} of ${_control.questionLength(widget.quiz)} ',
                       style: AppTextStyle.cairoFontBold(
-                        fontSize: 20.sp,
+                        fontSize: 20,
                         myColor: AppColor.textColorGrayOfSubTitle,
                       ),
                     ),
@@ -74,7 +74,7 @@ class _QuizFlutterState extends State<QuizFlutter> {
                     Text(
                       '${_control.question(widget.quiz, index)}',
                       style: AppTextStyle.cairoFontSimBold(
-                        fontSize: 28.sp,
+                        fontSize: 28,
                         myColor: AppColor.myTeal,
                       ),
                     ),
@@ -98,7 +98,7 @@ class _QuizFlutterState extends State<QuizFlutter> {
                                 }
                               : null,
                           child: Container(
-                            height: 74.h,
+                            height: 80.h,
                             width: double.infinity,
                             decoration: BoxDecoration(
                               color: _control.isPressed
@@ -115,8 +115,9 @@ class _QuizFlutterState extends State<QuizFlutter> {
                               child: Text(
                                 '${_control.questionKey(widget.quiz, index, item)}',
                                 softWrap: true,
-                                style: AppTextStyle.eBFontSemBold(
-                                    fontSize: 26.sp,
+                                textAlign: TextAlign.center,
+                                style: AppTextStyle.cairoFontSimBold(
+                                    fontSize: 20,
                                     myColor: _control.isPressed
                                         ? Colors.white
                                         : AppColor.myTeal),

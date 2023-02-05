@@ -24,14 +24,14 @@ class NotificationsScreen extends StatelessWidget {
             ),
             Text('Notifications',
                 style: AppTextStyle.cairoFontBold(
-                    fontSize: 36.sp, myColor: AppColor.myDarkTeal)),
+                    fontSize: 36, myColor: AppColor.myDarkTeal)),
             SizedBox(
               height: 10.h,
             ),
             Text(
               'Here you will find all the notifications that \n have been sent to you',
-              style: AppTextStyle.eBFontRegular(
-                  fontSize: 19.sp, myColor: AppColor.textColorGrayOfSubTitle),
+              style: AppTextStyle.cairoFontRegular(
+                  fontSize: 19, myColor: AppColor.textColorGrayOfSubTitle),
             ),
           ],
         ),

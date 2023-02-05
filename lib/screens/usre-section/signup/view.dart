@@ -6,7 +6,7 @@ import 'package:interview_project/core/utils/app_color.dart';
 import 'package:interview_project/core/utils/app_strings.dart';
 import 'package:interview_project/screens/usre-section/login/view.dart';
 import 'package:interview_project/screens/usre-section/login/widget/text_in_line.dart';
-import 'package:interview_project/screens/usre-section/signup/widget/item_drob_down.dart';
+import 'package:interview_project/widget/item_drob_down.dart';
 import 'package:interview_project/screens/usre-section/upload_photo/view.dart';
 import 'package:interview_project/widget/item_button.dart';
 
@@ -20,9 +20,6 @@ class SignUpScreen extends StatefulWidget {
 }
 
 class _SignUpScreenState extends State<SignUpScreen> {
-  List<dynamic> list = ["Male", "Female"];
-  String? dropdownValue = 'Gender';
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -41,50 +38,31 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   Text(
                     'Sign up',
                     style: AppTextStyle.cairoFontBold(
-                        fontSize: 48, myColor: AppColor.myTeal),
+                        fontSize: 45, myColor: AppColor.myTeal),
                   ),
                   Text(
                     'create a new account',
-                    style: AppTextStyle.eBFontSemBold(
-                        fontSize: 20, myColor: AppColor.textColorGray),
-                  ),
-                  SizedBox(
-                    height: 15.h,
+                    style: AppTextStyle.cairoFontSimBold(
+                      fontSize: 20,
+                      myColor: AppColor.textColorGray,
+                    ),
                   ),
                   const ItemTextFormFiled(
                     hintText: 'First name',
                   ),
-                  SizedBox(
-                    height: 12.h,
-                  ),
                   const ItemTextFormFiled(
                     hintText: 'Last name',
-                  ),
-                  SizedBox(
-                    height: 12.h,
                   ),
                   const ItemTextFormFiled(
                     hintText: 'Enter your email',
                   ),
-                  SizedBox(
-                    height: 12.h,
-                  ),
                   const ItemTextFormFiled(
                     hintText: 'Password',
                   ),
-                  SizedBox(
-                    height: 12.h,
-                  ),
-                  //ItemTextFormFiled(hintText: 'Gender'),
-                  const ItemDropDownWidget(),
-                  SizedBox(
-                    height: 12.h,
-                  ),
+                  const ItemDropDownWidget(
+                      listOfName: ["Famel", "Male"], hintText: "Gender"),
                   const ItemTextFormFiled(
                     hintText: 'Phone',
-                  ),
-                  SizedBox(
-                    height: 22.h,
                   ),
                   ItemButtonWidget(
                       text: 'Register',
@@ -99,7 +77,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     children: [
                       Text(
                         "Already have an account? ",
-                        style: AppTextStyle.eBFontBold(
+                        style: AppTextStyle.cairoFontBold(
                             fontSize: 20, myColor: AppColor.textColorGray),
                       ),
                       SizedBox(
@@ -112,10 +90,10 @@ class _SignUpScreenState extends State<SignUpScreen> {
                         child: Text(
                           'login',
                           style: TextStyle(
-                            fontFamily: AppStrings.fontEB,
+                            fontFamily: AppStrings.fontCairo,
                             fontSize: 20.sp,
                             color: AppColor.textColorGray,
-                            fontWeight: FontWeight.bold,
+                            fontWeight: FontWeight.w700,
                             decoration: TextDecoration.underline,
                             decorationColor: AppColor.textColorGray,
                           ),

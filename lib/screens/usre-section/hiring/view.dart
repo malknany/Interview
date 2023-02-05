@@ -28,17 +28,17 @@ class _HiringScreenState extends State<HiringScreen> {
           width: double.infinity,
           child: SafeArea(
             child: Padding(
-              padding: EdgeInsets.symmetric(horizontal: 30.0.w),
+              padding: EdgeInsets.symmetric(horizontal: 22.0.w),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  ItemBarCustom(),
+                  const ItemBarCustom(),
                   Padding(
                     padding: EdgeInsets.symmetric(vertical: 12.0.h),
                     child: Text(
                       'Find Your Dream Job',
                       style: AppTextStyle.cairoFontBold(
-                        fontSize: 24.sp,
+                        fontSize: 24,
                         myColor: const Color(0xff455A64).withOpacity(0.84),
                       ),
                     ),
@@ -50,9 +50,7 @@ class _HiringScreenState extends State<HiringScreen> {
                         width: 303.w,
                         child: const SearchItem(hintText: 'Search ......'),
                       ),
-                      SizedBox(
-                        width: 10.w,
-                      ),
+                      const Spacer(),
                       InkWell(
                         onTap: () {
                           showModalBottomSheet(
@@ -94,14 +92,14 @@ class _HiringScreenState extends State<HiringScreen> {
                         Text(
                           ' Recent Jobs',
                           style: AppTextStyle.cairoFontBold(
-                            fontSize: 20.sp,
+                            fontSize: 20,
                             myColor: const Color(0xff455A64).withOpacity(0.84),
                           ),
                         ),
                         Text(
                           'View All',
                           style: AppTextStyle.cairoFontMedium(
-                            fontSize: 16.sp,
+                            fontSize: 16,
                             myColor: const Color(0xff455A64).withOpacity(0.84),
                           ),
                         ),

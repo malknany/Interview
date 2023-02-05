@@ -4,9 +4,9 @@ import 'package:interview_project/core/style/text_style.dart';
 import 'package:interview_project/core/utils/app_color.dart';
 
 class TextFiledProfile extends StatelessWidget {
-  String label;
+  final String label;
 
-  TextFiledProfile({Key? key, required this.label}) : super(key: key);
+  const TextFiledProfile({Key? key, required this.label}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -28,10 +28,10 @@ class TextFiledProfile extends StatelessWidget {
         decoration: InputDecoration(
           filled: true,
           fillColor: Colors.white,
-          contentPadding: EdgeInsets.only(top: 7.h, bottom: 16.h, left: 32.w),
+          contentPadding: EdgeInsets.only(top: 7.h, bottom: 12.h, left: 32.w),
           hintText: label,
-          hintStyle: AppTextStyle.eBFontRegular(
-              fontSize: 20.sp, myColor: AppColor.myTeal,),
+          hintStyle: AppTextStyle.cairoFontRegular(
+              fontSize: 16, myColor: AppColor.myTeal,),
           border: OutlineInputBorder(
             borderRadius: BorderRadius.all(
               Radius.circular(10.r),

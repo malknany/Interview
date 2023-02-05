@@ -5,8 +5,8 @@ import 'package:interview_project/core/style/text_style.dart';
 import 'package:interview_project/core/utils/app_color.dart';
 import 'package:interview_project/screens/usre-section/doucoment/widget/pdf_item.dart';
 class ItemListTile extends StatefulWidget {
-  ItemListTile({Key? key,required this.title,required this.subTitle,required this.path}) : super(key: key);
-  String title, subTitle,path;
+  const ItemListTile({Key? key,required this.title,required this.subTitle,required this.path}) : super(key: key);
+  final String title, subTitle,path;
 
   @override
   State<ItemListTile> createState() => _ItemListTileState();
@@ -20,12 +20,12 @@ class _ItemListTileState extends State<ItemListTile> {
       child: ListTile(
         title: Text(widget.title,
             style: AppTextStyle.cairoFontBold(
-                fontSize: 16.sp,
+                fontSize: 16,
                 myColor: AppColor.textColorGrayOfSubTitle)),
         leading: Image.asset('assets/image/icon PDF File.png'),
         subtitle: Text(widget.subTitle,
             style: AppTextStyle.cairoFontSimBold(
-                fontSize: 16.sp, myColor: AppColor.myTeal)),
+                fontSize: 16, myColor: AppColor.myTeal)),
         onTap: () {
           navigateTo(
             context,

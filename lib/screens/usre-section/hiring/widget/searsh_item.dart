@@ -13,15 +13,14 @@ class SearchItem extends StatelessWidget {
     return TextFormField(
       decoration: InputDecoration(
         contentPadding:
-            EdgeInsets.only(left: 17.w, top: 9.h, bottom: 14.h, right: 18.w),
+            EdgeInsets.only(left: 17.w, top: 9.h, bottom: 5.h, right: 12.w),
         suffixIcon: Icon(
           Icons.search,
           color: AppColor.myTeal,
         ),
-        // need app font eb regule here
         hintText: hintText,
-        hintStyle: AppTextStyle.eBFontMedium(
-          fontSize: 16.sp,
+        hintStyle: AppTextStyle.cairoFontRegular(
+          fontSize: 16,
           myColor: const Color(0xff585252),
         ),
         filled: true,

@@ -11,7 +11,7 @@ import 'package:interview_project/widget/item_button.dart';
 class ResultScreen extends StatelessWidget {
   ResultScreen({Key? key, required this.score, required this.quiz})
       : super(key: key);
-  int score, quiz;
+  final int score, quiz;
   final QuestionControl _control = QuestionControl();
 
   @override
@@ -28,7 +28,7 @@ class ResultScreen extends StatelessWidget {
                 Text(
                   'Round Result',
                   style: AppTextStyle.cairoFontMedium(
-                      fontSize: 20.sp, myColor: AppColor.myTeal),
+                      fontSize: 20, myColor: AppColor.myTeal),
                 ),
                 SizedBox(
                   height: 10.h,
@@ -36,7 +36,7 @@ class ResultScreen extends StatelessWidget {
                 Text(
                   'GOOD JOB KEEP IT UP!',
                   style: AppTextStyle.cairoFontSimBold(
-                      fontSize: 26.sp,
+                      fontSize: 26,
                       myColor: AppColor.textColorGrayOfSubTitle),
                 ),
                 SizedBox(
@@ -46,7 +46,7 @@ class ResultScreen extends StatelessWidget {
                 Text(
                     '${((score / _control.questionLength(quiz)) * 100).floor()}%',
                     style: AppTextStyle.cairoFontBold(
-                        fontSize: 36.sp, myColor: AppColor.myDarkTeal)),
+                        fontSize: 36, myColor: AppColor.myDarkTeal)),
                 SizedBox(
                   height: 10.h,
                 ),

@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:interview_project/core/style/text_style.dart';
 import 'package:interview_project/core/utils/app_color.dart';
-import 'package:interview_project/core/utils/app_strings.dart';
 import 'package:interview_project/screens/choose_account/widget/item_container.dart';
+import 'package:interview_project/screens/company-section/on_bording/view.dart';
 
 import '../usre-section/on_bording/view.dart';
 
@@ -26,28 +27,23 @@ class ChooseAccountScreen extends StatelessWidget {
               ),
               Text(
                 'Choose Your Account',
-                style: TextStyle(
-                    fontSize: 28.sp,
-                    color: AppColor.myTeal,
-                    fontWeight: FontWeight.bold,
-                    fontFamily: AppStrings.fontCairo),
-              ),
+                style: AppTextStyle.cairoFontBold(fontSize: 28, myColor: AppColor.myTeal,),),
               SizedBox(
-                height: 28.h,
+                height: 22.h,
               ),
-              const ItemContainer(
+               ItemContainer(
                   image: 'assets/image/user.png',
                   text: 'USER',
-                  width: 75,
-                  nextPage: OnBoardingScreen()),
+                  width: 75.w,
+                  nextPage: const OnBoardingScreen()),
               SizedBox(
                 height: 36.h,
               ),
-              ItemContainer(
+               ItemContainer(
                 image: 'assets/image/company.png',
                 text: 'COMPANY',
-                width: 19,
-                nextPage: Container(),
+                width: 19.w,
+                nextPage: const CompOnBoardingScreen(),
               )
             ],
           ),

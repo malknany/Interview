@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:interview_project/core/app-rout/navigate.dart';
 import 'package:interview_project/core/style/text_style.dart';
 import 'package:interview_project/core/utils/app_color.dart';
+import 'package:interview_project/screens/usre-section/hiring/widget/list_tile_user.dart';
 import 'package:interview_project/screens/usre-section/profile/controle.dart';
 import 'package:interview_project/screens/usre-section/upload_photo/view.dart';
 
@@ -33,7 +34,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   Expanded(
                     child: Text('Profile',
                         style: AppTextStyle.cairoFontBold(
-                            fontSize: 28.sp, myColor: Colors.black,),),
+                            fontSize: 28, myColor: Colors.black,),),
                   ),
                   IconButton(icon: Icon(Icons.edit,color: AppColor.myTeal),onPressed: (){
                     navigateTo(context, const ProfileEditeScreen());
@@ -62,13 +63,13 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     ),
               Text(_profileController.data.name,
                   style: AppTextStyle.cairoFontBold(
-                      fontSize: 20.sp, myColor: AppColor.myDarkTeal)),
+                      fontSize: 20, myColor: AppColor.myDarkTeal)),
               Text(_profileController.data.nameJob,
-                  style: AppTextStyle.eBFontRegular(
-                      fontSize: 22.sp, myColor: AppColor.textColorGrayOfEMType)),
+                  style: AppTextStyle.cairoFontRegular(
+                      fontSize: 14, myColor: AppColor.textColorGrayOfEMType)),
               Text(_profileController.data.location,
-                  style: AppTextStyle.eBFontRegular(
-                      fontSize: 22.sp, myColor: AppColor.textColorGrayOfEMType)),
+                  style: AppTextStyle.cairoFontRegular(
+                      fontSize: 14, myColor: AppColor.textColorGrayOfEMType)),
               SizedBox(
                 height: 35.h,
               ),
@@ -89,7 +90,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       child: Text(
                         _profileController.data.skills[index],
                         style: AppTextStyle.cairoFontBold(
-                            fontSize: 16.sp, myColor: Colors.white),
+                            fontSize: 14, myColor: Colors.white),
                       ),
                     ),
                   )),
@@ -101,47 +102,15 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   horizontal: 44.h,
                 ),
                 child: Column(children: [
-                  ListTile(
-                    title: Text('Email',
-                        style: AppTextStyle.cairoFontMedium(
-                            fontSize: 24.sp, myColor: AppColor.myDarkTeal)),
-                    subtitle: Text(
-                      _profileController.data.email,
-                      style: AppTextStyle.eBFontRegular(
-                          fontSize: 22.sp, myColor: AppColor.textColorGrayOfEMType),
-                    ),
-                    leading: Icon(Icons.email, color: AppColor.myTeal, size: 32.sm),
-                  ),
+                  ItemListTileUser(title: 'Email', subTitle: _profileController.data.email, icon: Icons.email),
                   const Divider(
                     color: Color(0xffE0E0E0),
                   ),
-                  ListTile(
-                    title: Text('Phone',
-                        style: AppTextStyle.cairoFontMedium(
-                            fontSize: 24.sp, myColor: AppColor.myDarkTeal)),
-                    subtitle: Text(
-                      _profileController.data.phone,
-                      style: AppTextStyle.eBFontRegular(
-                          fontSize: 22.sp, myColor: AppColor.textColorGrayOfEMType),
-                    ),
-                    leading: Icon(Icons.phone_android,
-                        color: AppColor.myTeal, size: 32.sm),
-                  ),
+                  ItemListTileUser(title: 'Phone', subTitle: _profileController.data.phone, icon: Icons.phone_android),
                   const Divider(
                     color: Color(0xffE0E0E0),
                   ),
-                  ListTile(
-                    title: Text('Experience',
-                        style: AppTextStyle.cairoFontMedium(
-                            fontSize: 24.sp, myColor: AppColor.myDarkTeal)),
-                    subtitle: Text(
-                      _profileController.data.experience,
-                      style: AppTextStyle.eBFontRegular(
-                          fontSize: 18.sp, myColor: AppColor.textColorGrayOfEMType),
-                    ),
-                    leading:
-                        Icon(Icons.lightbulb, color: AppColor.myTeal, size: 32.sm),
-                  ),
+                  ItemListTileUser(title: 'Experience', subTitle:_profileController.data.experience, icon: Icons.lightbulb),
                 ]),
               )
             ],

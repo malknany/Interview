@@ -3,9 +3,9 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:interview_project/core/style/text_style.dart';
 import 'package:interview_project/core/utils/app_color.dart';
 class ItemContainer extends StatelessWidget {
-   ItemContainer({Key? key,required this.title,required this.numberResult,required this.padding}) : super(key: key);
-  String title,numberResult;
-  double padding;
+  const ItemContainer({Key? key,required this.title,required this.numberResult,required this.padding}) : super(key: key);
+  final String title,numberResult;
+  final double padding;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -29,16 +29,16 @@ class ItemContainer extends StatelessWidget {
         children: [
           Text(
             title,
-            style: AppTextStyle.eBFontBold(
-                fontSize: 20.sp, myColor: AppColor.myTeal),
+            style: AppTextStyle.cairoFontBold(
+                fontSize: 20, myColor: AppColor.myTeal),
           ),
           SizedBox(
             height: 2.h,
           ),
           Text(
             numberResult,
-            style: AppTextStyle.eBFontBold(
-                fontSize: 20.sp, myColor: AppColor.myTeal),
+            style: AppTextStyle.cairoFontBold(
+                fontSize: 20, myColor: AppColor.myTeal),
           ),
         ],
       ),

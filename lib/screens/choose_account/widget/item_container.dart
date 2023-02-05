@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:interview_project/core/app-rout/navigate.dart';
-import 'package:interview_project/core/utils/app_strings.dart';
+import 'package:interview_project/core/style/text_style.dart';
 
 import '../../../core/utils/app_color.dart';
 
@@ -52,11 +52,10 @@ class ItemContainer extends StatelessWidget {
             ),
             Text(
               text,
-              style: TextStyle(
-                  fontSize: 30.sp,
-                  color: Colors.white,
-                  fontFamily: AppStrings.fontEB,
-                  fontWeight: FontWeight.w700),
+              style: AppTextStyle.cairoFontMedium(
+                fontSize: 24,
+                myColor: Colors.white,
+              ),
             ),
           ],
         ),

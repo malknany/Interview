@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../../../core/style/text_style.dart';
-import '../../../../core/utils/app_color.dart';
+import '../core/style/text_style.dart';
+import '../core/utils/app_color.dart';
 
 class ItemDropDownWidget extends StatefulWidget {
-  const ItemDropDownWidget({Key? key}) : super(key: key);
+  const  ItemDropDownWidget({Key? key,required this.listOfName,required this.hintText}) : super(key: key);
+  final List<String> listOfName;
+  final String hintText;
 
   @override
   State<ItemDropDownWidget> createState() => _ItemDropDownWidgetState();
@@ -17,7 +19,7 @@ class _ItemDropDownWidgetState extends State<ItemDropDownWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 64.h,
+      height: 70.h,
       decoration:
           BoxDecoration(borderRadius: BorderRadius.circular(10.r), boxShadow: [
         BoxShadow(
@@ -36,9 +38,9 @@ class _ItemDropDownWidgetState extends State<ItemDropDownWidget> {
                   color: AppColor.borderTextFiled)),
           contentPadding:
               EdgeInsets.only(left: 30.w, top: 15.h, bottom: 15.h, right: 22.w),
-          hintText: 'Gender',
+          hintText: widget.hintText,
           hintStyle: AppTextStyle.cairoFontBold(
-              fontSize: 20, myColor: AppColor.textFiledColor),
+              fontSize: 20, myColor: AppColor.textFiledColor.withOpacity(0.86)),
           enabledBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(10.r),
               borderSide: BorderSide(
@@ -52,8 +54,6 @@ class _ItemDropDownWidgetState extends State<ItemDropDownWidget> {
         iconDisabledColor: AppColor.borderTextFiled,
         dropdownColor: Colors.white,
         borderRadius: BorderRadius.circular(20.r),
-        //itemHeight: 10.h,
-        //value: dropdownValue,
         onChanged: (String? newValue) {
           setState(() {
             dropdownValue = newValue!;
@@ -61,16 +61,14 @@ class _ItemDropDownWidgetState extends State<ItemDropDownWidget> {
         },
         icon: const Icon(Icons.keyboard_arrow_down_rounded),
         iconSize: 35,
-        items: <String>[
-          'Male',
-          'Female',
-        ].map<DropdownMenuItem<String>>((String value) {
+        items:
+          widget.listOfName.map<DropdownMenuItem<String>>((String value) {
           return DropdownMenuItem<String>(
             value: value,
             child: Text(
               value,
-              style: AppTextStyle.eBFontBold(
-                  fontSize: 25.sp, myColor: AppColor.myTeal),
+              style: AppTextStyle.cairoFontRegular(
+                  fontSize: 25, myColor: AppColor.myTeal),
             ),
           );
         }).toList(),

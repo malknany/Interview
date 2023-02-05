@@ -19,22 +19,22 @@ class MCQScreen extends StatelessWidget {
           children: [
             Text('Recent Traning',
                 style: AppTextStyle.cairoFontMedium(
-                    fontSize: 24.sp,
+                    fontSize: 24,
                     myColor: AppColor.textColorGrayOfSubTitle)),
             ListTileItem(
               title: 'Flutter',
               numberQustion: '10/10',
-              nextPage: QuizFlutter(quiz: 1),
+              nextPage: const QuizFlutter(quiz: 1),
             ),
             ListTileItem(
               title: 'HTML',
               numberQustion: '7/7',
-              nextPage: QuizFlutter(quiz: 2),
+              nextPage: const QuizFlutter(quiz: 2),
             ),
             ListTileItem(
               title: 'CSS',
               numberQustion: '5/5',
-              nextPage: QuizFlutter(quiz: 3),
+              nextPage: const QuizFlutter(quiz: 3),
             ),
           ],
         ),

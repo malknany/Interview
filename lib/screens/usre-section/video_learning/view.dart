@@ -52,7 +52,7 @@ class _VideoLearningScreenState extends State<VideoLearningScreen> {
                       borderRadius: BorderRadius.circular(10.r),
                       color: AppColor.myTeal,),
                   labelStyle: AppTextStyle.cairoFontMedium(
-                      fontSize: 18.sp, myColor: AppColor.myDarkTeal,),
+                      fontSize: 18, myColor: AppColor.myDarkTeal,),
                   tabs:  const [
                     Tab(
                       text: 'Virtual Interview Training',
@@ -75,8 +75,8 @@ class _VideoLearningScreenState extends State<VideoLearningScreen> {
                     SingleChildScrollView(
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Center(child: Text('Avtar tranning',style: TextStyle(fontSize: 25.sp,color: Colors.amber),)),
+                        children: const [
+                          Center(child: Text('Avtar tranning',style: TextStyle(fontSize: 25,color: Colors.amber),)),
                         ],
                       ),
                     ),

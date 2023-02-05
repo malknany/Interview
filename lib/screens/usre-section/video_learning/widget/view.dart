@@ -125,10 +125,10 @@ class _VideoFromYouTubeState extends State<VideoFromYouTube> {
                 children: [
                   Text('Popular Videos',
                       style: AppTextStyle.cairoFontMedium(
-                          fontSize: 24.sp, myColor: AppColor.myTeal)),
+                          fontSize: 24, myColor: AppColor.myTeal)),
                   Text('Veiw All',
                       style: AppTextStyle.cairoFontSimBold(
-                          fontSize: 16.sp, myColor: AppColor.myTeal)),
+                          fontSize: 16, myColor: AppColor.myTeal)),
                 ],
               ),
               const SizedBox(

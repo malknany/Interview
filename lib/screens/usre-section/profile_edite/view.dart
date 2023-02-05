@@ -7,8 +7,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:interview_project/core/style/text_style.dart';
 import 'package:interview_project/core/utils/app_color.dart';
+import 'package:interview_project/screens/usre-section/profile_edite/widget/textfiledprofile.dart';
 import 'package:interview_project/screens/usre-section/upload_photo/view.dart';
-import 'package:interview_project/screens/usre-section/upload_photo/widget/textfiledprofile.dart';
 
 class ProfileEditeScreen extends StatefulWidget {
   const ProfileEditeScreen({Key? key}) : super(key: key);
@@ -33,7 +33,7 @@ class _ProfileEditeScreenState extends State<ProfileEditeScreen> {
         title: Text(
           'Edit Profile',
           style: AppTextStyle.cairoFontBold(
-            fontSize: 28.sp,
+            fontSize: 28,
             myColor: Colors.black,
           ),
         ),
@@ -47,7 +47,7 @@ class _ProfileEditeScreenState extends State<ProfileEditeScreen> {
               child: Text(
                 'Save',
                 style: AppTextStyle.cairoFontMedium(
-                    fontSize: 24.sp, myColor: AppColor.myTeal),
+                    fontSize: 24, myColor: AppColor.myTeal),
               ))
         ],
       ),
@@ -83,14 +83,14 @@ class _ProfileEditeScreenState extends State<ProfileEditeScreen> {
                         ),
                       ),
                     ),
-              TextFiledProfile(label: 'Full Name'),
-              TextFiledProfile(label: 'job Title'),
-              TextFiledProfile(label: 'Email'),
-              TextFiledProfile(label: 'Password'),
-              TextFiledProfile(label: 'Birth of Date'),
-              TextFiledProfile(label: 'Phone'),
-              TextFiledProfile(label: 'Location'),
-              TextFiledProfile(label: 'Experience'),
+              const TextFiledProfile(label: 'Full Name'),
+              const TextFiledProfile(label: 'job Title'),
+              const TextFiledProfile(label: 'Email'),
+              const TextFiledProfile(label: 'Password'),
+              const TextFiledProfile(label: 'Birth of Date'),
+              const TextFiledProfile(label: 'Phone'),
+              const TextFiledProfile(label: 'Location'),
+              const TextFiledProfile(label: 'Experience'),
             ],
           ),
         ),

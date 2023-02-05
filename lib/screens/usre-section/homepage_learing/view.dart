@@ -17,14 +17,14 @@ class HomePageLearningScreen extends StatelessWidget {
           children: [
             Padding(
               padding:  EdgeInsets.symmetric(horizontal: 41.0.w,vertical: 5.h),
-              child: ItemBarCustom(),
+              child: const ItemBarCustom(),
             ),
             Padding(
               padding: EdgeInsets.only(bottom: 50.0.h, top: 7.h),
               child: Text(
                 'Categories',
                 style: AppTextStyle.cairoFontBold(
-                  fontSize: 26.sp,
+                  fontSize: 26,
                   myColor: AppColor.textColorGrayOfTitle,
                 ),
               ),

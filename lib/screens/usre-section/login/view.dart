@@ -62,13 +62,13 @@ class _LogInScreenState extends State<LogInScreen> {
                     Text(
                       'Keep me logged in ',
                       // 16 textLoginColor
-                      style: AppTextStyle.eBFontSemBold(
+                      style: AppTextStyle.cairoFontSimBold(
                           fontSize: 16, myColor: AppColor.textLoginColor),
                     ),
                     const Spacer(),
                     Text(
                       'Forget password?',
-                      style: AppTextStyle.eBFontSemBold(
+                      style: AppTextStyle.cairoFontSimBold(
                           fontSize: 16, myColor: AppColor.textLoginColor),
                     ),
                   ],
@@ -86,7 +86,7 @@ class _LogInScreenState extends State<LogInScreen> {
                     Text(
                       "Don't have an account?",
                       // 20 textColorGray bold eb
-                      style: AppTextStyle.eBFontBold(
+                      style: AppTextStyle.cairoFontBold(
                           fontSize: 20, myColor: AppColor.textColorGray),
                     ),
                     SizedBox(
@@ -110,11 +110,11 @@ class _LogInScreenState extends State<LogInScreen> {
                   ],
                 ),
                 SizedBox(
-                  height: 24.h,
+                  height: 21.h,
                 ),
                 const TextInLine(),
                 SizedBox(
-                  height: 20.h,
+                  height: 19.h,
                 ),
                 Row(
                   mainAxisSize: MainAxisSize.min,

@@ -31,7 +31,7 @@ class BottomSheetFeedBack extends StatelessWidget {
                   'How Was Your Experience with virtual interview?',
                   textAlign: TextAlign.center,
                   style: AppTextStyle.cairoFontSimBold(
-                      fontSize: 26.sp, myColor: AppColor.myDarkTeal),
+                      fontSize: 24, myColor: AppColor.myDarkTeal),
                 ),
               ),
               RatingBar.builder(
@@ -50,7 +50,7 @@ class BottomSheetFeedBack extends StatelessWidget {
                 ),
                 unratedColor: const Color(0xffC7C5C5),
                 onRatingUpdate: (rating) {
-                  print(rating);
+                  //print(rating);
                 },
               ),
               Align(
@@ -58,7 +58,7 @@ class BottomSheetFeedBack extends StatelessWidget {
                 child: Text(
                   'Write a note',
                   style: AppTextStyle.cairoFontSimBold(
-                      fontSize: 20.sp, myColor: AppColor.myTeal),
+                      fontSize: 20, myColor: AppColor.myTeal),
                 ),
               ),
               Container(
@@ -97,8 +97,8 @@ class BottomSheetFeedBack extends StatelessWidget {
                       contentPadding:
                           EdgeInsets.only(left: 30.w, top: 15.h, bottom: 15.h),
                       hintText: 'Your note',
-                      hintStyle: AppTextStyle.cairoFontBold(
-                          fontSize: 20, myColor: AppColor.textFiledColor)),
+                      hintStyle: AppTextStyle.cairoFontRegular(
+                          fontSize: 15, myColor: AppColor.textFiledColor)),
                 ),
               ),
               Padding(
@@ -114,8 +114,8 @@ class BottomSheetFeedBack extends StatelessWidget {
                   ),
                   child: Text(
                     'Submit',
-                    style: AppTextStyle.eBFontRegular(
-                        fontSize: 28.sp, myColor: Colors.white),
+                    style: AppTextStyle.cairoFontRegular(
+                        fontSize: 25, myColor: Colors.white),
                   ),
                 ),
               )

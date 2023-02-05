@@ -24,14 +24,14 @@ class SavedMassageScreen extends StatelessWidget {
             ),
             Text('You have no Saved Items',
                 style: AppTextStyle.cairoFontBold(
-                    fontSize: 32.sp, myColor: AppColor.myDarkTeal)),
+                    fontSize: 32, myColor: AppColor.myDarkTeal)),
             SizedBox(
               height: 10.h,
             ),
             Text(
               'Here you will find all the adverisiements \n you saved',
-              style: AppTextStyle.eBFontRegular(
-                  fontSize: 19.sp, myColor: AppColor.textColorGrayOfSubTitle),
+              style: AppTextStyle.cairoFontRegular(
+                  fontSize: 19, myColor: AppColor.textColorGrayOfSubTitle),
             ),
           ],
         ),

@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:interview_project/core/utils/app_color.dart';
-import 'package:interview_project/screens/usre-section/profile/controle.dart';
 
 import '../screens/usre-section/upload_photo/view.dart';
 
 class ItemBarCustom extends StatelessWidget {
-  ItemBarCustom({Key? key}) : super(key: key);
-  final ProfileController _profileController = ProfileController();
+  const ItemBarCustom({Key? key}) : super(key: key);
   static GlobalKey<ScaffoldState> globalKey =GlobalKey<ScaffoldState>();
   @override
   Widget build(BuildContext context) {

@@ -39,15 +39,15 @@ class PosterADS extends StatelessWidget {
               child: Column(
                 children: [
                   Padding(
-                    padding: EdgeInsets.only(top: 57.h, bottom: 18.h),
+                    padding: EdgeInsets.only(top: 50.h, bottom: 18.h),
                     child: Text(
                       controller.ads[0].textTitle,
                       style: AppTextStyle.cairoFontBold(
-                          fontSize: 20.sp, myColor: AppColor.myTeal),
+                          fontSize: 20, myColor: AppColor.myTeal),
                     ),
                   ),
                   Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 10.5.w),
+                    padding: EdgeInsets.symmetric(horizontal: 9.5.w),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -55,8 +55,8 @@ class PosterADS extends StatelessWidget {
                           child: Text(
                             controller.ads[0].nameCompany,
                             textAlign: TextAlign.center,
-                            style: AppTextStyle.eBFontSemBold(
-                              fontSize: 17.sp,
+                            style: AppTextStyle.cairoFontSimBold(
+                              fontSize: 17,
                               myColor: AppColor.textColorGray.withOpacity(0.86),
                             ),
                           ),
@@ -67,8 +67,8 @@ class PosterADS extends StatelessWidget {
                             controller.ads[0].location,
                             textAlign: TextAlign.center,
                             overflow: TextOverflow.ellipsis,
-                            style: AppTextStyle.eBFontSemBold(
-                              fontSize: 11.sp,
+                            style: AppTextStyle.cairoFontSimBold(
+                              fontSize: 11,
                               myColor: AppColor.textColorGray.withOpacity(0.86),
                             ),
                           ),
@@ -76,8 +76,8 @@ class PosterADS extends StatelessWidget {
                         Expanded(
                           child: Text(
                             controller.ads[0].time,
-                            style: AppTextStyle.eBFontSemBold(
-                              fontSize: 17.sp,
+                            style: AppTextStyle.cairoFontSimBold(
+                              fontSize: 15,
                               myColor: AppColor.textColorGray.withOpacity(0.86),
                             ),
                           ),

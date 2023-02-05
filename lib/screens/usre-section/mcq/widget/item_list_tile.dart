@@ -40,12 +40,12 @@ class ListTileItem extends StatelessWidget {
         title: Text(
           '$title MCQ',
           style: AppTextStyle.cairoFontSimBold(
-              fontSize: 24.sp, myColor: AppColor.textColorGrayOfSubTitle),
+              fontSize: 20, myColor: AppColor.textColorGrayOfSubTitle),
         ),
         subtitle: Text(
           '$numberQustion Qastions',
-          style: AppTextStyle.eBFontRegular(
-              fontSize: 18.sp, myColor: AppColor.textColorGrayOfSubTitle),
+          style: AppTextStyle.cairoFontRegular(
+              fontSize: 15, myColor: AppColor.textColorGrayOfSubTitle),
         ),
         onTap: () {
           navigateTo(context, nextPage);

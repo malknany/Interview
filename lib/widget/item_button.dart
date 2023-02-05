@@ -16,14 +16,16 @@ class ItemButtonWidget extends StatelessWidget {
       onPressed: nextPage,
       style: ElevatedButton.styleFrom(
           backgroundColor: AppColor.myTeal,
-          fixedSize: Size(376.w, 70.h),
+          fixedSize: Size(376.w, 75.h),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(10.r),
           )),
-      child: Text(
-        text,
-        style: AppTextStyle.cairoFontSimBold(
-            fontSize: 36.sp, myColor: Colors.white),
+      child: Center(
+        child: Text(
+          text,
+          style: AppTextStyle.cairoFontSimBold(
+              fontSize: 36, myColor: Colors.white),
+        ),
       ),
     );
   }
