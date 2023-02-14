@@ -22,7 +22,7 @@ class ItemContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        navigateTo(context, nextPage);
+        navigateAndPop(context, nextPage);
       },
       child: Container(
         width: 340.w,

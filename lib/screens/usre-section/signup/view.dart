@@ -6,9 +6,9 @@ import 'package:interview_project/core/utils/app_color.dart';
 import 'package:interview_project/core/utils/app_strings.dart';
 import 'package:interview_project/screens/usre-section/login/view.dart';
 import 'package:interview_project/screens/usre-section/login/widget/text_in_line.dart';
-import 'package:interview_project/widget/item_drob_down.dart';
 import 'package:interview_project/screens/usre-section/upload_photo/view.dart';
 import 'package:interview_project/widget/item_button.dart';
+import 'package:interview_project/widget/item_drob_down.dart';
 
 import '../../../widget/item_textformfield.dart';
 

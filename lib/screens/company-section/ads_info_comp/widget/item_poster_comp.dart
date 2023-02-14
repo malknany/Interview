@@ -37,7 +37,7 @@ class CompPosterADS extends StatelessWidget {
               child: Column(
                 children: [
                   Padding(
-                    padding: EdgeInsets.only(top: 45.h, bottom: 18.h),
+                    padding: EdgeInsets.only(top: 45.h, bottom: 10.h),
                     child: Text(
                       controller.infoComp[0].title,
                       style: AppTextStyle.cairoFontBold(
@@ -54,7 +54,7 @@ class CompPosterADS extends StatelessWidget {
                             controller.infoComp[0].nameComp,
                             textAlign: TextAlign.center,
                             style: AppTextStyle.cairoFontSimBold(
-                              fontSize: 17,
+                              fontSize: 15,
                               myColor: AppColor.textColorGray.withOpacity(0.86),
                             ),
                           ),
@@ -66,7 +66,7 @@ class CompPosterADS extends StatelessWidget {
                             textAlign: TextAlign.center,
                             overflow: TextOverflow.ellipsis,
                             style: AppTextStyle.cairoFontSimBold(
-                              fontSize: 11,
+                              fontSize: 14,
                               myColor: AppColor.textColorGray.withOpacity(0.86),
                             ),
                           ),
@@ -75,7 +75,7 @@ class CompPosterADS extends StatelessWidget {
                           child: Text(
                             controller.infoComp[0].time,
                             style: AppTextStyle.cairoFontSimBold(
-                              fontSize: 17,
+                              fontSize: 15,
                               myColor: AppColor.textColorGray.withOpacity(0.86),
                             ),
                           ),

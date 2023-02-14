@@ -87,7 +87,7 @@ class CompADS extends StatelessWidget {
                 ),
               ),
               Padding(
-                padding: EdgeInsets.symmetric(vertical: 12.h),
+                padding: EdgeInsets.symmetric(vertical: 10.h),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.end,
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -101,7 +101,7 @@ class CompADS extends StatelessWidget {
                       softWrap: true,
                       overflow: TextOverflow.ellipsis,
                       style: AppTextStyle.cairoFontBold(
-                        fontSize: 14,
+                        fontSize: 13,
                         myColor: const Color(0xff349792),
                       ),
                     ),

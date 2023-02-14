@@ -5,6 +5,7 @@ import 'package:interview_project/core/style/text_style.dart';
 import 'package:interview_project/core/utils/app_color.dart';
 import 'package:interview_project/screens/company-section/hiring/view.dart';
 import 'package:interview_project/screens/company-section/homepage/widget/item_drawer.dart';
+import 'package:interview_project/screens/company-section/upload_com/view.dart';
 import 'package:interview_project/screens/company-section/upload_photo/view.dart';
 
 class CompHomePageScreen extends StatefulWidget {
@@ -18,12 +19,7 @@ class _CompHomePageScreenState extends State<CompHomePageScreen> {
   final GlobalKey<ScaffoldState> _globalKey = GlobalKey<ScaffoldState>();
   final List<Widget> _widgetScreen = <Widget>[
     const CompHiringScreen(),
-    const Center(
-      child: Text(
-        'upload',
-        style: TextStyle(fontSize: 30, fontWeight: FontWeight.w600),
-      ),
-    ),
+    const CompUploadScreen(),
     const Center(
       child: Text(
         'accepted',

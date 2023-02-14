@@ -18,9 +18,9 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     Timer(
-      const Duration(seconds: 5),
+      const Duration(seconds: 6),
       () {
-        navigateTo(context, const ChooseAccountScreen());
+        navigateAndPop(context, const ChooseAccountScreen());
       },
     );
     super.initState();
