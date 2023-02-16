@@ -17,7 +17,9 @@ class CertificatesSideScreen extends StatelessWidget {
       child: Padding(
         padding: EdgeInsets.symmetric(horizontal: 20.w),
         child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-          Row(children: [
+          Row(
+
+              children: [
             const Icon(Icons.arrow_back_ios_new, color: Colors.teal),
             // TODO:  Add InkWell Here After Navigation
             SizedBox(width: 105.w),

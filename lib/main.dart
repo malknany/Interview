@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:interview_project/core/utils/app_strings.dart';
-import 'package:interview_project/screens/splash/view.dart';
-import 'package:interview_project/screens/forget_password/view.dart';
+
+import 'package:interview_project/screens/all_pages/first_page.dart';
+import 'package:interview_project/screens/all_templetes/view.dart';
+import 'package:interview_project/screens/choosen_templete/view.dart';
+import 'package:interview_project/screens/paid_templete/view.dart';
+import 'package:interview_project/screens/your_cv/view.dart';
 
 import 'core/app-rout/navigate.dart';
 import 'core/style/app_theme.dart';
@@ -20,7 +24,7 @@ void main(){
      ),
       // splash in main
       //child: const SplashScreen(),
-      child: const ForgetPasswordScreen(),
+      child: const AllTempletesScreen(),
     ),
     );
 }

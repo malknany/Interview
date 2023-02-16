@@ -19,14 +19,14 @@ class ItemButtonWidget extends StatelessWidget {
       },
       style: ElevatedButton.styleFrom(
           backgroundColor: AppColor.myTeal,
-          fixedSize: Size(376.w, 70.h),
+          fixedSize: Size(370.w, 70.h),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(10.r),
           )),
       child: Text(
         text,
         style:
-            AppTextStyle.cairoFontSimBold(fontSize: 32, myColor: Colors.white),
+            AppTextStyle.cairoFontSimBold(fontSize: 25, myColor: Colors.white),
       ),
     );
   }
