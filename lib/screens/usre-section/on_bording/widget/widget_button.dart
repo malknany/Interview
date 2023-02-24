@@ -17,7 +17,7 @@ class ButtonWidget extends StatelessWidget {
       children: [
         ElevatedButton(
           onPressed: () {
-            navigateTo(context, const LogInScreen());
+            navigateAndPop(context, const LogInScreen());
           },
           style: ElevatedButton.styleFrom(
               fixedSize: Size(143.w, 48.h),
@@ -35,7 +35,7 @@ class ButtonWidget extends StatelessWidget {
         ),
         ElevatedButton(
           onPressed: () {
-            navigateTo(context, const SignUpScreen());
+            navigateAndPop(context, const SignUpScreen());
           },
           style: ElevatedButton.styleFrom(
               fixedSize: Size(143.w, 48.h),

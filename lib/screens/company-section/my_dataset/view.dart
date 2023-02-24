@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:interview_project/core/app-rout/navigate.dart';
 import 'package:interview_project/core/style/text_style.dart';
 import 'package:interview_project/core/utils/app_color.dart';
-import 'package:interview_project/screens/company-section/upload_new_dataset/view.dart';
 import 'package:interview_project/screens/usre-section/hiring/widget/searsh_item.dart';
 
 class CompDataSetScreen extends StatelessWidget {
@@ -113,21 +111,21 @@ class CompDataSetScreen extends StatelessWidget {
                   SizedBox(
                     height: 65.h,
                   ),
-                  InkWell(
-                    onTap: ()=>navigateTo(context,const UploadNewDataSetScreen()),
-                    child: Container(
-                      height: 49.h,
-                      width: 333.w,
-                      decoration: BoxDecoration(
-                        color: AppColor.myTeal,
-                        borderRadius: BorderRadius.circular(10.r),
-                      ),
-                      child: Center(
-                          child: Text('Upload a New DataSet',
-                              style: AppTextStyle.cairoFontBold(
-                                  fontSize: 20, myColor: Colors.white))),
-                    ),
-                  )
+                  // InkWell(
+                  //   onTap: ()=>navigateTo(context,const UploadNewDataSetScreen()),
+                  //   child: Container(
+                  //     height: 49.h,
+                  //     width: 333.w,
+                  //     decoration: BoxDecoration(
+                  //       color: AppColor.myTeal,
+                  //       borderRadius: BorderRadius.circular(10.r),
+                  //     ),
+                  //     child: Center(
+                  //         child: Text('Upload a New DataSet',
+                  //             style: AppTextStyle.cairoFontBold(
+                  //                 fontSize: 20, myColor: Colors.white))),
+                  //   ),
+                  // )
                 ],
               ),
             ),

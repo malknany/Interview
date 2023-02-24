@@ -27,23 +27,25 @@ class ChooseAccountScreen extends StatelessWidget {
               ),
               Text(
                 'Choose Your Account',
-                style: AppTextStyle.cairoFontBold(fontSize: 28, myColor: AppColor.myTeal,),),
+                style: AppTextStyle.cairoFontBold(
+                  fontSize: 28,
+                  myColor: AppColor.myTeal,
+                ),
+              ),
               SizedBox(
                 height: 22.h,
               ),
-               ItemContainer(
+              const ItemContainer(
                   image: 'assets/image/user.png',
                   text: 'USER',
-                  width: 75.w,
-                  nextPage: const OnBoardingScreen()),
+                  nextPage: OnBoardingScreen()),
               SizedBox(
                 height: 36.h,
               ),
-               ItemContainer(
+              const ItemContainer(
                 image: 'assets/image/company.png',
                 text: 'COMPANY',
-                width: 19.w,
-                nextPage: const CompOnBoardingScreen(),
+                nextPage: CompOnBoardingScreen(),
               )
             ],
           ),

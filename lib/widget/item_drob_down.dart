@@ -1,24 +1,29 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:interview_project/screens/usre-section/resume_steber/control.dart';
 
 import '../core/style/text_style.dart';
 import '../core/utils/app_color.dart';
 
 class ItemDropDownWidget extends StatefulWidget {
-  const  ItemDropDownWidget({Key? key,required this.listOfName,required this.hintText}) : super(key: key);
+  ItemDropDownWidget(
+      {Key? key, required this.listOfName, required this.hintText})
+      : super(key: key);
   final List<String> listOfName;
   final String hintText;
+  String dropdownValue = "";
 
   @override
   State<ItemDropDownWidget> createState() => _ItemDropDownWidgetState();
 }
 
 class _ItemDropDownWidgetState extends State<ItemDropDownWidget> {
-  String dropdownValue = "";
+  final ResumeStepperControl _resumeStepperControl = ResumeStepperControl();
 
   @override
   Widget build(BuildContext context) {
     return Container(
+      margin: EdgeInsets.symmetric(vertical: 5.h),
       height: 70.h,
       decoration:
           BoxDecoration(borderRadius: BorderRadius.circular(10.r), boxShadow: [
@@ -56,13 +61,13 @@ class _ItemDropDownWidgetState extends State<ItemDropDownWidget> {
         borderRadius: BorderRadius.circular(20.r),
         onChanged: (String? newValue) {
           setState(() {
-            dropdownValue = newValue!;
+            _resumeStepperControl.degree = newValue!;
           });
         },
         icon: const Icon(Icons.keyboard_arrow_down_rounded),
         iconSize: 35,
         items:
-          widget.listOfName.map<DropdownMenuItem<String>>((String value) {
+        widget.listOfName.map<DropdownMenuItem<String>>((String value) {
           return DropdownMenuItem<String>(
             value: value,
             child: Text(

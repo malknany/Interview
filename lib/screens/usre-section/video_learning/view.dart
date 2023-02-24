@@ -5,6 +5,7 @@ import 'package:interview_project/core/utils/app_color.dart';
 import 'package:interview_project/screens/usre-section/doucoment/view.dart';
 import 'package:interview_project/screens/usre-section/mcq/view.dart';
 import 'package:interview_project/screens/usre-section/video_learning/widget/view.dart';
+import 'package:interview_project/widget/item_button.dart';
 
 class VideoLearningScreen extends StatefulWidget {
   const VideoLearningScreen({Key? key}) : super(key: key);
@@ -74,9 +75,18 @@ class _VideoLearningScreenState extends State<VideoLearningScreen> {
                   children: [
                     SingleChildScrollView(
                       child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: const [
-                          Center(child: Text('Avtar tranning',style: TextStyle(fontSize: 25,color: Colors.amber),)),
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Image.asset('assets/image/learningavatar.png'),
+                          Text('Are You Ready \n For Virtual Interview',
+                              textAlign: TextAlign.center,
+                              style: AppTextStyle.cairoFontBold(
+                                  fontSize: 30, myColor: AppColor.myDarkTeal)),
+                          SizedBox(
+                            height: 20.h,
+                          ),
+                          ItemButtonWidget(
+                              text: 'GO TO INTERVIEW', nextPage: () {}),
                         ],
                       ),
                     ),

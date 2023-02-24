@@ -39,8 +39,8 @@ class _CompAddAdvertisementScreenState
                     myColor: AppColor.myTeal,
                   ),
                 ),
-                const ItemDropDownWidget(
-                    listOfName: ['Flutter', 'web', 'AI', 'Data Since'],
+                ItemDropDownWidget(
+                    listOfName: const ['Flutter', 'web', 'AI', 'Data Since'],
                     hintText: ''),
                 Text(
                   'Employment Type',
@@ -49,8 +49,8 @@ class _CompAddAdvertisementScreenState
                     myColor: AppColor.myTeal,
                   ),
                 ),
-                const ItemDropDownWidget(
-                    listOfName: ['Full time', 'remote'], hintText: ''),
+                ItemDropDownWidget(
+                    listOfName: const ['Full time', 'remote'], hintText: ''),
                 Text(
                   'Salary',
                   style: AppTextStyle.cairoFontBold(
@@ -58,7 +58,7 @@ class _CompAddAdvertisementScreenState
                     myColor: AppColor.myTeal,
                   ),
                 ),
-                const ItemDropDownWidget(listOfName: [
+                ItemDropDownWidget(listOfName: const [
                   'Less then 1000',
                   '1000',
                   '1500',
@@ -75,7 +75,7 @@ class _CompAddAdvertisementScreenState
                     myColor: AppColor.myTeal,
                   ),
                 ),
-                const ItemDropDownWidget(listOfName: [
+                ItemDropDownWidget(listOfName: const [
                   "Cairo",
                   "Alexandria",
                   "Gizeh",
@@ -94,8 +94,8 @@ class _CompAddAdvertisementScreenState
                     myColor: AppColor.myTeal,
                   ),
                 ),
-                const ItemDropDownWidget(
-                    listOfName: ['Flutter', 'web', 'AI', 'Data Since'],
+                ItemDropDownWidget(
+                    listOfName: const ['Flutter', 'web', 'AI', 'Data Since'],
                     hintText: ''),
                 Text(
                   'Job Details',

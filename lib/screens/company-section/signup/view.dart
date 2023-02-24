@@ -58,18 +58,21 @@ class _CompSignUpScreenState extends State<CompSignUpScreen> {
                   const ItemTextFormFiled(
                     hintText: 'Password',
                   ),
-                  const ItemDropDownWidget(hintText: 'Location', listOfName: [
-                    "Cairo",
-                    "Alexandria",
-                    "Gizeh",
-                    "Port Said",
-                    "Suez",
-                    "Luxor",
-                    "Al-Mansura",
-                    "El-Mahalla El-Kubra",
-                    "Tanta",
-                    "	Asyut"
-                  ],),
+                  ItemDropDownWidget(
+                    hintText: 'Location',
+                    listOfName: const [
+                      "Cairo",
+                      "Alexandria",
+                      "Gizeh",
+                      "Port Said",
+                      "Suez",
+                      "Luxor",
+                      "Al-Mansura",
+                      "El-Mahalla El-Kubra",
+                      "Tanta",
+                      "	Asyut"
+                    ],
+                  ),
                   const ItemTextFormFiled(
                     hintText: 'Phone',
                   ),
@@ -79,7 +82,7 @@ class _CompSignUpScreenState extends State<CompSignUpScreen> {
                   ItemButtonWidget(
                       text: 'Register',
                       nextPage: () {
-                        navigateTo(context,const CompUpLoadPhotoScreen());
+                        navigateTo(context, const CompUpLoadPhotoScreen());
                       }),
                   SizedBox(
                     height: 12.h,

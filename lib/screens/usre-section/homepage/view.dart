@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:interview_project/core/style/text_style.dart';
 import 'package:interview_project/core/utils/app_color.dart';
+import 'package:interview_project/screens/usre-section/cv_home/view.dart';
 import 'package:interview_project/screens/usre-section/homepage/widgets/drawerItem.dart';
 import 'package:interview_project/screens/usre-section/homepage_learing/view.dart';
 import 'package:interview_project/widget/item_photo_notifa_bar.dart';
@@ -21,12 +22,7 @@ class _HomePageScreenState extends State<HomePageScreen> {
 
    final List<Widget> _widgetScreen = <Widget>[
     const HiringScreen(),
-    const Center(
-      child: Text(
-        'Cv',
-        style: TextStyle(fontSize: 30, fontWeight: FontWeight.w600),
-      ),
-    ),
+    const CvHomeScreen(),
     const HomePageLearningScreen(),
     const ProfileScreen()
   ];

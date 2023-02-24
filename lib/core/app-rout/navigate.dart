@@ -67,6 +67,6 @@ Future<void> navigateTo(BuildContext context, Widget page) {
   );
 }
 
-void pop(BuildContext context) {
+void navigatePop(BuildContext context) {
   return Navigator.pop(context);
 }

@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:interview_project/core/style/text_style.dart';
 import 'package:interview_project/core/utils/app_color.dart';
+import 'package:interview_project/screens/company-section/accepted/view.dart';
 import 'package:interview_project/screens/company-section/hiring/view.dart';
 import 'package:interview_project/screens/company-section/homepage/widget/item_drawer.dart';
 import 'package:interview_project/screens/company-section/upload_com/view.dart';
@@ -20,12 +21,7 @@ class _CompHomePageScreenState extends State<CompHomePageScreen> {
   final List<Widget> _widgetScreen = <Widget>[
     const CompHiringScreen(),
     const CompUploadScreen(),
-    const Center(
-      child: Text(
-        'accepted',
-        style: TextStyle(fontSize: 30, fontWeight: FontWeight.w600),
-      ),
-    ),
+    AcceptedScreen()
   ];
 
   int _selectedIndex = 0;

@@ -22,7 +22,8 @@ class CompInfo extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Center(child: Image.asset('assets/image/logo2.png')),
+                  Center(
+                      child: Image.asset('assets/image/logowithouttext.jpg')),
                   Text(
                     'Industry',
                     style: AppTextStyle.cairoFontBold(

@@ -4,15 +4,15 @@ import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:interview_project/core/app-rout/navigate.dart';
-import 'package:interview_project/screens/usre-section/inof_from_user/view.dart';
 import 'package:interview_project/widget/item_button.dart';
 
 import '../../../core/style/text_style.dart';
 import '../../../core/utils/app_color.dart';
 
 class UpLoadPhotoScreen extends StatefulWidget {
-  const UpLoadPhotoScreen({Key? key}) : super(key: key);
+  const UpLoadPhotoScreen({Key? key, required this.nextPage}) : super(key: key);
   static File? imageSlecte;
+  final Widget nextPage;
 
   @override
   State<UpLoadPhotoScreen> createState() => _UpLoadPhotoScreenState();
@@ -24,7 +24,7 @@ class _UpLoadPhotoScreenState extends State<UpLoadPhotoScreen> {
     final result = await FilePicker.platform.pickFiles(type: FileType.image);
     if (result != null) {
       UpLoadPhotoScreen.imageSlecte = File(result.files.single.path!);
-      navigateTo(context, const InfoFromUser());
+      navigateAndPop(context, widget.nextPage);
       setState(() {});
     }
   }
@@ -44,7 +44,7 @@ class _UpLoadPhotoScreenState extends State<UpLoadPhotoScreen> {
                   const Spacer(),
                   InkWell(
                     onTap: () {
-                      navigateTo(context, const InfoFromUser());
+                      navigateAndPop(context, widget.nextPage);
                     },
                     child: Text(
                       'Skip',

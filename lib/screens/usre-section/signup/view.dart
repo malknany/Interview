@@ -4,6 +4,7 @@ import 'package:interview_project/core/app-rout/navigate.dart';
 import 'package:interview_project/core/style/text_style.dart';
 import 'package:interview_project/core/utils/app_color.dart';
 import 'package:interview_project/core/utils/app_strings.dart';
+import 'package:interview_project/screens/usre-section/inof_from_user/view.dart';
 import 'package:interview_project/screens/usre-section/login/view.dart';
 import 'package:interview_project/screens/usre-section/login/widget/text_in_line.dart';
 import 'package:interview_project/screens/usre-section/upload_photo/view.dart';
@@ -59,15 +60,19 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   const ItemTextFormFiled(
                     hintText: 'Password',
                   ),
-                  const ItemDropDownWidget(
-                      listOfName: ["Famel", "Male"], hintText: "Gender"),
+                  ItemDropDownWidget(
+                      listOfName: const ["Famel", "Male"], hintText: "Gender"),
                   const ItemTextFormFiled(
                     hintText: 'Phone',
                   ),
                   ItemButtonWidget(
                       text: 'Register',
                       nextPage: () {
-                        navigateTo(context, const UpLoadPhotoScreen());
+                        navigateAndPop(
+                            context,
+                            const UpLoadPhotoScreen(
+                              nextPage: InfoFromUser(),
+                            ));
                       }),
                   SizedBox(
                     height: 12.h,

@@ -22,7 +22,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
       body: SafeArea(
         child: GestureDetector(
           onTap: () {
-            const Duration(milliseconds: 200);
+            const Duration(milliseconds: 450);
             setState(() {
               if (control.index < 2) {
                 control.index++;

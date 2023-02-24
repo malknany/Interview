@@ -20,7 +20,7 @@ class _ShowBottomSheetScreenState extends State<ShowBottomSheetScreen> {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 770.h,
+      height: 780.h,
       child: Column(
         children: [
           Container(
