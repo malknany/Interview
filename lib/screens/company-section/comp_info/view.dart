@@ -108,7 +108,8 @@ class CompInfo extends StatelessWidget {
                   ItemButtonWidget(
                       text: 'NEXT',
                       nextPage: () {
-                        navigateTo(context, const CompHomePageScreen());
+                        navigateToAndRemoveUntil(context,
+                            page: const CompHomePageScreen());
                       }),
                   SizedBox(
                     height: 60.h,

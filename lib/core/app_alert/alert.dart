@@ -33,17 +33,16 @@ class ShowAlert{
       type: QuickAlertType.warning,
       showCancelBtn: true,
       borderRadius: 50.r,
-      onConfirmBtnTap: () => navigateToAndRemove(context,
-          page:  nextPage, withHistory: false),
+      onConfirmBtnTap: () => navigateToAndRemoveUntil(context, page: nextPage),
       onCancelBtnTap: () => Navigator.pop(context),
       cancelBtnText: 'No',
       cancelBtnTextStyle: AppTextStyle.cairoFontRegular(
-        myColor:AppColor.textColorGray.withOpacity(0.86),
+        myColor: AppColor.textColorGray.withOpacity(0.86),
         fontSize: 20,
       ),
       confirmBtnText: 'Yes',
-      confirmBtnTextStyle: AppTextStyle.cairoFontRegular(
-          fontSize: 20, myColor: Colors.white),
+      confirmBtnTextStyle:
+          AppTextStyle.cairoFontRegular(fontSize: 20, myColor: Colors.white),
       confirmBtnColor: AppColor.myTeal,
       animType: QuickAlertAnimType.scale,
       //titleColor: AppColor.myTeal,

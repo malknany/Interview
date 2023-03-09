@@ -1,9 +1,15 @@
-import 'package:flutter/cupertino.dart';
-import 'package:interview_project/screens/usre-section/video_learning/view.dart';
+import 'package:flutter/material.dart';
 
-class LearningModel{
+import '../second_page_learning/view.dart';
+
+class LearningModel {
   bool isSelected;
-  String? image,subTitle;
+  String? image, subTitle;
   Widget nextPage;
-  LearningModel({required this.image,required this.subTitle,this.isSelected=false,this.nextPage=const VideoLearningScreen()});
+
+  LearningModel(
+      {required this.image,
+      required this.subTitle,
+      this.isSelected = false,
+      this.nextPage = const SecondPageLearningScreen()});
 }

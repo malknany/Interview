@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:interview_project/core/app-rout/navigate.dart';
 import 'package:interview_project/core/style/text_style.dart';
 import 'package:interview_project/core/utils/app_color.dart';
+import 'package:interview_project/screens/usre-section/homepage/view.dart';
 
 class BottomSheetFeedBack extends StatelessWidget {
   const BottomSheetFeedBack({Key? key}) : super(key: key);
@@ -104,7 +106,10 @@ class BottomSheetFeedBack extends StatelessWidget {
               Padding(
                 padding: EdgeInsets.symmetric(vertical: 32.0.h),
                 child: ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    navigateToAndRemoveUntil(context,
+                        page: const HomePageScreen());
+                  },
                   style: ElevatedButton.styleFrom(
                     fixedSize: Size(189.w, 48.h),
                     backgroundColor: AppColor.myTeal,

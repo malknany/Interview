@@ -10,7 +10,7 @@ import '../../../core/style/text_style.dart';
 import '../../../core/utils/app_color.dart';
 
 class UpLoadPhotoScreen extends StatefulWidget {
-  const UpLoadPhotoScreen({Key? key, required this.nextPage}) : super(key: key);
+   const UpLoadPhotoScreen({Key? key, required this.nextPage}) : super(key: key);
   static File? imageSlecte;
   final Widget nextPage;
 
@@ -24,7 +24,7 @@ class _UpLoadPhotoScreenState extends State<UpLoadPhotoScreen> {
     final result = await FilePicker.platform.pickFiles(type: FileType.image);
     if (result != null) {
       UpLoadPhotoScreen.imageSlecte = File(result.files.single.path!);
-      navigateAndPop(context, widget.nextPage);
+      navigateTo(context, widget.nextPage);
       setState(() {});
     }
   }
@@ -42,10 +42,8 @@ class _UpLoadPhotoScreenState extends State<UpLoadPhotoScreen> {
               Row(
                 children: [
                   const Spacer(),
-                  InkWell(
-                    onTap: () {
-                      navigateAndPop(context, widget.nextPage);
-                    },
+                  GestureDetector(
+                    onTap: () => navigateTo(context, widget.nextPage),
                     child: Text(
                       'Skip',
                       style: AppTextStyle.cairoFontSimBold(

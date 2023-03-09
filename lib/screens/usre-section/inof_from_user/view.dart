@@ -92,9 +92,12 @@ class InfoFromUser extends StatelessWidget {
                   height: 39.h,
                 ),
                 ItemButtonWidget(
-                    text: 'NEXT',
-                    nextPage: () =>
-                        navigateAndPop(context, const HomePageScreen())),
+                  text: 'NEXT',
+                  nextPage: () => navigateToAndRemoveUntil(
+                    context,
+                    page: const HomePageScreen(),
+                  ),
+                ),
                 SizedBox(
                   height: 39.h,
                 ),

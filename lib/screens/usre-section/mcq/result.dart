@@ -74,8 +74,10 @@ class ResultScreen extends StatelessWidget {
                 ItemButtonWidget(
                     text: 'Finish',
                     nextPage: () {
-                      navigateToAndRemove(context,
-                          page: const HomePageScreen(), withHistory: true);
+                      navigateToAndRemoveUntil(
+                        context,
+                        page: const HomePageScreen(),
+                      );
                     })
               ],
             ),

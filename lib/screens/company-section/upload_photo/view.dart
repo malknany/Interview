@@ -24,6 +24,7 @@ class _CompUpLoadPhotoScreenState extends State<CompUpLoadPhotoScreen> {
     final result = await FilePicker.platform.pickFiles(type: FileType.image);
     if (result != null) {
       CompUpLoadPhotoScreen.compImageSelected = File(result.files.single.path!);
+      // ignore: use_build_context_synchronously
       navigateTo(context, const CompInfo());
       setState(() {});
     }

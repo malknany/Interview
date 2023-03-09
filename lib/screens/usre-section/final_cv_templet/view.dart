@@ -2,8 +2,10 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:interview_project/core/app-rout/navigate.dart';
 import 'package:interview_project/core/style/text_style.dart';
 import 'package:interview_project/core/utils/app_color.dart';
+import 'package:interview_project/screens/usre-section/homepage/view.dart';
 import 'package:interview_project/screens/usre-section/upload_photo/view.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:pdf/pdf.dart';
@@ -27,7 +29,7 @@ class FinalCvTempletScreen extends StatelessWidget {
     required this.userListOfSkills,
     Key? key,
   }) : super(key: key);
-  String userName,
+  final String userName,
       userDescription,
       userPeriod,
       userLink,
@@ -37,11 +39,14 @@ class FinalCvTempletScreen extends StatelessWidget {
       userJobTitle,
       userUnivName,
       userCertificates;
-  List<String> userListOfLanguage;
-  List<String> userListOfSkills;
+  final List<String> userListOfLanguage;
+  final List<String> userListOfSkills;
   final screenshotControl = ScreenshotController();
 
-  Future screenToPdf(String fileName, screenShot) async {
+  Future screenToPdf(
+    String fileName,
+    screenShot,
+  ) async {
     pw.Document pdf = pw.Document();
     pdf.addPage(
       pw.Page(
@@ -80,6 +85,14 @@ class FinalCvTempletScreen extends StatelessWidget {
               },
               icon: Icon(
                 Icons.share,
+                color: AppColor.myTeal,
+              )),
+          IconButton(
+              onPressed: () {
+                navigateAndFinished(context, const HomePageScreen());
+              },
+              icon: Icon(
+                Icons.home,
                 color: AppColor.myTeal,
               ))
         ],

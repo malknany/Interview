@@ -82,7 +82,8 @@ class _CompSignUpScreenState extends State<CompSignUpScreen> {
                   ItemButtonWidget(
                       text: 'Register',
                       nextPage: () {
-                        navigateTo(context, const CompUpLoadPhotoScreen());
+                        navigateToAndRemoveUntil(context,
+                            page: const CompUpLoadPhotoScreen());
                       }),
                   SizedBox(
                     height: 12.h,
@@ -100,7 +101,8 @@ class _CompSignUpScreenState extends State<CompSignUpScreen> {
                       ),
                       GestureDetector(
                         onTap: () {
-                          navigateTo(context, const CompLogInScreen());
+                          navigateToAndRemoveUntil(context,
+                              page: const CompLogInScreen());
                         },
                         child: Text(
                           'login',

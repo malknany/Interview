@@ -5,7 +5,7 @@ import 'package:interview_project/core/utils/app_color.dart';
 import 'package:interview_project/screens/usre-section/homepage/widgets/itemlisttile(drawer).dart';
 import 'package:interview_project/screens/usre-section/notifications/view.dart';
 import 'package:interview_project/screens/usre-section/profile/controle.dart';
-import 'package:interview_project/screens/usre-section/profile/view.dart';
+import 'package:interview_project/screens/usre-section/resume_steber/view.dart';
 import 'package:interview_project/screens/usre-section/saved_Massege/view.dart';
 import 'package:interview_project/screens/usre-section/upload_photo/view.dart';
 
@@ -25,43 +25,49 @@ class ItemDrawer extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Container(
-                width: 50.w,
-                height: 50.h,
-                clipBehavior: Clip.antiAlias,
-                decoration: BoxDecoration(
-                  color: AppColor.myDarkTeal,
-                  shape: BoxShape.circle,
-                ),
-                child: Center(
-                  child: UpLoadPhotoScreen.imageSlecte == null
-                      ? const CircleAvatar(
-                          backgroundImage:
-                              AssetImage('assets/image/profile_image.png'),
-                        )
-                      : Image.file(
-                          UpLoadPhotoScreen.imageSlecte!,
-                          fit: BoxFit.fill,
-                        ),
+              Expanded(
+                child: Container(
+                  width: 50.w,
+                  height: 50.h,
+                  clipBehavior: Clip.antiAlias,
+                  decoration: BoxDecoration(
+                    color: AppColor.myDarkTeal,
+                    shape: BoxShape.circle,
+                  ),
+                  child: Center(
+                    child: UpLoadPhotoScreen.imageSlecte == null
+                        ? const CircleAvatar(
+                            backgroundImage:
+                                AssetImage('assets/image/profile_image.png'),
+                          )
+                        : Image.file(
+                            UpLoadPhotoScreen.imageSlecte!,
+                            fit: BoxFit.fill,
+                          ),
+                  ),
                 ),
               ),
-              Text(_profileController.data.name,
-                  style: AppTextStyle.cairoFontBold(
-                      fontSize: 20, myColor: AppColor.textColorGray)),
-              Text(_profileController.data.nameJob,
-                  style: AppTextStyle.cairoFontRegular(
-                      fontSize: 20, myColor: Colors.white)),
+              Expanded(
+                child: Text(_profileController.data.name,
+                    style: AppTextStyle.cairoFontBold(
+                        fontSize: 20, myColor: AppColor.textColorGray)),
+              ),
+              Expanded(
+                child: Text(_profileController.data.nameJob,
+                    style: AppTextStyle.cairoFontRegular(
+                        fontSize: 20, myColor: Colors.white)),
+              ),
             ],
           ),
         ),
-        const ItemListTileDrawer(
-            title: 'Profile', icon: Icons.person, nextPage: ProfileScreen()),
         const ItemListTileDrawer(
             title: 'Notifications',
             icon: Icons.notifications,
             nextPage: NotificationsScreen()),
         const ItemListTileDrawer(
-            title: 'Edit Your CV', icon: Icons.edit_note, nextPage: SizedBox()),
+            title: 'Edit Your CV',
+            icon: Icons.edit_note,
+            nextPage: ResumeStepper()),
         const ItemListTileDrawer(
             title: 'Messages',
             icon: Icons.mark_email_unread,

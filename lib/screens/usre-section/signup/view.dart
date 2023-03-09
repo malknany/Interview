@@ -68,11 +68,11 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   ItemButtonWidget(
                       text: 'Register',
                       nextPage: () {
-                        navigateAndPop(
-                            context,
-                            const UpLoadPhotoScreen(
-                              nextPage: InfoFromUser(),
-                            ));
+                        navigateToAndRemoveUntil(
+                          context,
+                          page:
+                              const UpLoadPhotoScreen(nextPage: InfoFromUser()),
+                        );
                       }),
                   SizedBox(
                     height: 12.h,
@@ -90,7 +90,10 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       ),
                       GestureDetector(
                         onTap: () {
-                          navigateTo(context, const LogInScreen());
+                          navigateToAndRemoveUntil(
+                            context,
+                            page: const LogInScreen(),
+                          );
                         },
                         child: Text(
                           'login',

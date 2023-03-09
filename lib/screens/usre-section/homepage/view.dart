@@ -6,7 +6,7 @@ import 'package:interview_project/core/utils/app_color.dart';
 import 'package:interview_project/screens/usre-section/cv_home/view.dart';
 import 'package:interview_project/screens/usre-section/homepage/widgets/drawerItem.dart';
 import 'package:interview_project/screens/usre-section/homepage_learing/view.dart';
-import 'package:interview_project/widget/item_photo_notifa_bar.dart';
+import 'package:interview_project/screens/usre-section/upload_photo/view.dart';
 
 import '../hiring/view.dart';
 import '../profile/view.dart';
@@ -19,8 +19,8 @@ class HomePageScreen extends StatefulWidget {
 }
 
 class _HomePageScreenState extends State<HomePageScreen> {
-
-   final List<Widget> _widgetScreen = <Widget>[
+  final globalKey = GlobalKey<ScaffoldState>();
+  final List<Widget> _widgetScreen = <Widget>[
     const HiringScreen(),
     const CvHomeScreen(),
     const HomePageLearningScreen(),
@@ -32,7 +32,36 @@ class _HomePageScreenState extends State<HomePageScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      key: ItemBarCustom.globalKey,
+      appBar: _selectedIndex != 3
+          ? AppBar(
+              leadingWidth: 90.w,
+              leading: InkWell(
+                onTap: () {
+                  globalKey.currentState!.openDrawer();
+                },
+                child: Center(
+                  child: UpLoadPhotoScreen.imageSlecte == null
+                      ? const CircleAvatar(
+                          foregroundImage:
+                              AssetImage('assets/image/profile_image.png'),
+                        )
+                      : Image.file(
+                          UpLoadPhotoScreen.imageSlecte!,
+                          fit: BoxFit.fill,
+                        ),
+                ),
+              ),
+              elevation: 0,
+              backgroundColor: Colors.white,
+              actions: [
+                Icon(
+                  Icons.notifications,
+                  color: AppColor.myTeal,
+                )
+              ],
+            )
+          : null,
+      key: globalKey,
       body: _widgetScreen.elementAt(_selectedIndex),
       bottomNavigationBar: Container(
         decoration: BoxDecoration(

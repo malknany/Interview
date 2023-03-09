@@ -77,10 +77,11 @@ class ItemTempletCv extends StatelessWidget {
                                   sizeFont: 24,
                                   nextPage: () {
                                     navigateTo(
-                                        context,
-                                        const UpLoadPhotoScreen(
-                                          nextPage: ResumeStepper(),
-                                        ));
+                                      context,
+                                      const UpLoadPhotoScreen(
+                                        nextPage: ResumeStepper(),
+                                      ),
+                                    );
                                   }),
                               SizedBox(
                                 height: 10.h,

@@ -35,7 +35,7 @@ class CompButtonWidget extends StatelessWidget {
         ),
         ElevatedButton(
           onPressed: () {
-            navigateAndPop(context,const CompSignUpScreen());
+            navigateTo(context, const CompSignUpScreen());
           },
           style: ElevatedButton.styleFrom(
               fixedSize: Size(143.w, 48.h),

@@ -20,7 +20,7 @@ class _CompHomePageScreenState extends State<CompHomePageScreen> {
   final GlobalKey<ScaffoldState> _globalKey = GlobalKey<ScaffoldState>();
   final List<Widget> _widgetScreen = <Widget>[
     const CompHiringScreen(),
-    const CompUploadScreen(),
+     CompUploadScreen(),
     AcceptedScreen()
   ];
 

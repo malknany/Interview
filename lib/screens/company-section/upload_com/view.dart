@@ -1,15 +1,22 @@
+
+
+import 'dart:io';
+
+import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:interview_project/core/app-rout/navigate.dart';
 import 'package:interview_project/core/style/text_style.dart';
 import 'package:interview_project/core/utils/app_color.dart';
 import 'package:interview_project/screens/company-section/my_dataset/view.dart';
+import 'package:interview_project/widget/item_button.dart';
 
 class CompUploadScreen extends StatelessWidget {
-  const CompUploadScreen({Key? key}) : super(key: key);
-
+   CompUploadScreen({Key? key}) : super(key: key);
+  late List<File> files;
   @override
   Widget build(BuildContext context) {
+
     return SafeArea(
         child: SizedBox(
       width: double.infinity,
@@ -77,24 +84,40 @@ class CompUploadScreen extends StatelessWidget {
                       myColor: AppColor.textColorGrayOfTitle,
                     ),
                   ),
-                  SizedBox(height: 32.h,),
-                  InkWell(
-                    child: Container(
-                      height: 53.h,
-                      width: 198.w,
-                      decoration: BoxDecoration(
-                        color: AppColor.myDarkTeal,
-                        borderRadius: BorderRadius.circular(10.r),
-                      ),
-                      child: Center(
-                        child: Text(
-                          'choose file',
-                          style: AppTextStyle.cairoFontBold(
-                              fontSize: 20, myColor: Colors.white,),
-                        ),
-                      ),
-                    ),
-                  )
+                  SizedBox(
+                    height: 32.h,
+                  ),
+                  ItemButtonWidget(
+                      text: 'choose file',
+                      nextPage: () async{
+                        FilePickerResult? result = await FilePicker.platform.pickFiles(type: FileType.custom,allowedExtensions: ['text'],allowMultiple: true);
+                        if (result != null) {
+                           files = result.paths.map((path) => File(path!)).toList();
+                          //result.paths.map((path) => File(path)).toList();
+                        } else {
+                          // User canceled the picker
+                        }
+                      },
+                      sizeFont: 20,
+                      height: 53,
+                      width: 198,),
+                  // InkWell(
+                  //   child: Container(
+                  //     height: 53.h,
+                  //     width: 198.w,
+                  //     decoration: BoxDecoration(
+                  //       color: AppColor.myDarkTeal,
+                  //       borderRadius: BorderRadius.circular(10.r),
+                  //     ),
+                  //     child: Center(
+                  //       child: Text(
+                  //         'choose file',
+                  //         style: AppTextStyle.cairoFontBold(
+                  //             fontSize: 20, myColor: Colors.white,),
+                  //       ),
+                  //     ),
+                  //   ),
+                  // )
                 ],
               ),
             ),
