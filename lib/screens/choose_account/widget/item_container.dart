@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:interview_project/core/app-rout/navigate.dart';
-import 'package:interview_project/core/utils/app_strings.dart';
+import 'package:interview_project/core/style/text_style.dart';
 
 import '../../../core/utils/app_color.dart';
 
@@ -10,21 +10,20 @@ class ItemContainer extends StatelessWidget {
       {Key? key,
       required this.image,
       required this.text,
-      required this.width,
       required this.nextPage})
       : super(key: key);
 
   final String text, image;
-  final double width;
   final Widget nextPage;
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        navigateTo(context, nextPage);
+        navigateToAndReplace(context, nextPage);
       },
       child: Container(
+        padding: EdgeInsets.only(left: 54.w, right: 75.w),
         width: 340.w,
         height: 83.h,
         decoration: BoxDecoration(
@@ -38,7 +37,7 @@ class ItemContainer extends StatelessWidget {
           ],
         ),
         child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisSize: MainAxisSize.min,
           children: [
@@ -47,16 +46,12 @@ class ItemContainer extends StatelessWidget {
               width: 65.80.w,
               child: Image.asset(image),
             ),
-            SizedBox(
-              width: width.w,
-            ),
             Text(
               text,
-              style: TextStyle(
-                  fontSize: 30.sp,
-                  color: Colors.white,
-                  fontFamily: AppStrings.fontEB,
-                  fontWeight: FontWeight.w700),
+              style: AppTextStyle.cairoFontMedium(
+                fontSize: 24,
+                myColor: Colors.white,
+              ),
             ),
           ],
         ),

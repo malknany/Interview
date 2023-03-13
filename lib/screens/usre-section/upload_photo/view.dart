@@ -4,33 +4,30 @@ import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:interview_project/core/app-rout/navigate.dart';
-import 'package:interview_project/screens/usre-section/hiring/controler.dart';
 import 'package:interview_project/widget/item_button.dart';
 
 import '../../../core/style/text_style.dart';
 import '../../../core/utils/app_color.dart';
-import '../homepage/view.dart';
 
 class UpLoadPhotoScreen extends StatefulWidget {
-  UpLoadPhotoScreen({Key? key}) : super(key: key);
+   const UpLoadPhotoScreen({Key? key, required this.nextPage}) : super(key: key);
   static File? imageSlecte;
+  final Widget nextPage;
 
   @override
   State<UpLoadPhotoScreen> createState() => _UpLoadPhotoScreenState();
 }
 
 class _UpLoadPhotoScreenState extends State<UpLoadPhotoScreen> {
-  final HiringController controller = HiringController();
 
   Future getImage() async {
     final result = await FilePicker.platform.pickFiles(type: FileType.image);
     if (result != null) {
       UpLoadPhotoScreen.imageSlecte = File(result.files.single.path!);
-      navigateTo(context, HomePageScreen());
+      navigateTo(context, widget.nextPage);
       setState(() {});
     }
   }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -45,10 +42,8 @@ class _UpLoadPhotoScreenState extends State<UpLoadPhotoScreen> {
               Row(
                 children: [
                   const Spacer(),
-                  InkWell(
-                    onTap: () {
-                      navigateTo(context, const HomePageScreen());
-                    },
+                  GestureDetector(
+                    onTap: () => navigateTo(context, widget.nextPage),
                     child: Text(
                       'Skip',
                       style: AppTextStyle.cairoFontSimBold(

@@ -20,7 +20,7 @@ class _ShowBottomSheetScreenState extends State<ShowBottomSheetScreen> {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 770.h,
+      height: 780.h,
       child: Column(
         children: [
           Container(
@@ -31,7 +31,7 @@ class _ShowBottomSheetScreenState extends State<ShowBottomSheetScreen> {
                   padding: EdgeInsets.only(left: 25.0.w, right: 130.w),
                   child: InkWell(
                     onTap: () => Navigator.pop(context),
-                    child: Icon(
+                    child: const Icon(
                       Icons.clear,
                       color: Colors.white,
                     ),
@@ -40,7 +40,7 @@ class _ShowBottomSheetScreenState extends State<ShowBottomSheetScreen> {
                 Text(
                   'Filters',
                   style: AppTextStyle.cairoFontBold(
-                      fontSize: 26.sp, myColor: Colors.white),
+                      fontSize: 26, myColor: Colors.white),
                 ),
               ],
             ),
@@ -57,7 +57,7 @@ class _ShowBottomSheetScreenState extends State<ShowBottomSheetScreen> {
                     child: Text(
                       'Employment Type',
                       style: AppTextStyle.cairoFontBold(
-                          fontSize: 24.sp, myColor: AppColor.myDarkTealTitle),
+                          fontSize: 24, myColor: AppColor.myDarkTealTitle),
                     ),
                   ),
                   Wrap(
@@ -89,7 +89,7 @@ class _ShowBottomSheetScreenState extends State<ShowBottomSheetScreen> {
                             border: Border.all(
                               color: AppColor.myTeal,
                               width: 1.w,
-                              strokeAlign: StrokeAlign.inside,
+                              strokeAlign: BorderSide.strokeAlignInside
                             ),
                           ),
                           child: Center(
@@ -97,8 +97,8 @@ class _ShowBottomSheetScreenState extends State<ShowBottomSheetScreen> {
                               controller.text[index].employmentType,
                               softWrap: true,
                               overflow: TextOverflow.ellipsis,
-                              style: AppTextStyle.eBFontBold(
-                                  fontSize: 20.sp,
+                              style: AppTextStyle.cairoFontBold(
+                                  fontSize: 16,
                                   myColor: controller.text[index].isSelect
                                       ? Colors.white
                                       : AppColor.textColorGrayOfEMType),
@@ -113,7 +113,7 @@ class _ShowBottomSheetScreenState extends State<ShowBottomSheetScreen> {
                     child: Text(
                       'Location',
                       style: AppTextStyle.cairoFontBold(
-                          fontSize: 24.sp, myColor: AppColor.myDarkTealTitle),
+                          fontSize: 24, myColor: AppColor.myDarkTealTitle),
                     ),
                   ),
                   SizedBox(
@@ -124,7 +124,7 @@ class _ShowBottomSheetScreenState extends State<ShowBottomSheetScreen> {
                     padding: EdgeInsets.symmetric(vertical: 15.0.w),
                     child: Text('Job Title',
                         style: AppTextStyle.cairoFontBold(
-                            fontSize: 24.sp,
+                            fontSize: 24,
                             myColor: AppColor.myDarkTealTitle)),
                   ),
                   Wrap(
@@ -159,7 +159,7 @@ class _ShowBottomSheetScreenState extends State<ShowBottomSheetScreen> {
                             border: Border.all(
                               color: AppColor.myTeal,
                               width: 1.w,
-                              strokeAlign: StrokeAlign.inside,
+                              strokeAlign: BorderSide.strokeAlignInside
                             ),
                           ),
                           child: Center(
@@ -167,8 +167,8 @@ class _ShowBottomSheetScreenState extends State<ShowBottomSheetScreen> {
                               controller.jobTitles[index].jobTitle,
                               textAlign: TextAlign.center,
                               overflow: TextOverflow.ellipsis,
-                              style: AppTextStyle.eBFontBold(
-                                  fontSize: 20.sp,
+                              style: AppTextStyle.cairoFontBold(
+                                  fontSize: 16,
                                   myColor: controller.jobTitles[index].isSelect
                                       ? Colors.white
                                       : AppColor.textColorGrayOfEMType),

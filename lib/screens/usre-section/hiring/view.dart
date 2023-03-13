@@ -6,7 +6,6 @@ import 'package:interview_project/screens/usre-section/hiring/controler.dart';
 import 'package:interview_project/screens/usre-section/hiring/widget/ad_container.dart';
 import 'package:interview_project/screens/usre-section/hiring/widget/bottom_sheet_item.dart';
 import 'package:interview_project/screens/usre-section/hiring/widget/searsh_item.dart';
-import 'package:interview_project/widget/item_photo_notifa_bar.dart';
 
 class HiringScreen extends StatefulWidget {
   const HiringScreen({
@@ -22,37 +21,33 @@ class _HiringScreenState extends State<HiringScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: SingleChildScrollView(
-        child: SizedBox(
-          width: double.infinity,
-          child: SafeArea(
-            child: Padding(
-              padding: EdgeInsets.symmetric(horizontal: 30.0.w),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  ItemBarCustom(),
-                  Padding(
-                    padding: EdgeInsets.symmetric(vertical: 12.0.h),
-                    child: Text(
-                      'Find Your Dream Job',
-                      style: AppTextStyle.cairoFontBold(
-                        fontSize: 24.sp,
-                        myColor: const Color(0xff455A64).withOpacity(0.84),
-                      ),
+    return SingleChildScrollView(
+      child: SizedBox(
+        width: double.infinity,
+        child: SafeArea(
+          child: Padding(
+            padding: EdgeInsets.symmetric(horizontal: 22.0.w),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Padding(
+                  padding: EdgeInsets.symmetric(vertical: 12.0.h),
+                  child: Text(
+                    'Find Your Dream Job',
+                    style: AppTextStyle.cairoFontBold(
+                      fontSize: 24,
+                      myColor: const Color(0xff455A64).withOpacity(0.84),
                     ),
                   ),
-                  Row(
-                    children: [
-                      SizedBox(
-                        height: 44.h,
+                ),
+                Row(
+                  children: [
+                    SizedBox(
+                      height: 44.h,
                         width: 303.w,
                         child: const SearchItem(hintText: 'Search ......'),
                       ),
-                      SizedBox(
-                        width: 10.w,
-                      ),
+                      const Spacer(),
                       InkWell(
                         onTap: () {
                           showModalBottomSheet(
@@ -74,7 +69,7 @@ class _HiringScreenState extends State<HiringScreen> {
                             border: Border.all(
                                 color: AppColor.myTeal,
                                 width: 1.w,
-                                strokeAlign: StrokeAlign.inside),
+                                strokeAlign: BorderSide.strokeAlignInside),
                           ),
                           child: Center(
                             child: ImageIcon(
@@ -94,25 +89,24 @@ class _HiringScreenState extends State<HiringScreen> {
                         Text(
                           ' Recent Jobs',
                           style: AppTextStyle.cairoFontBold(
-                            fontSize: 20.sp,
+                            fontSize: 20,
                             myColor: const Color(0xff455A64).withOpacity(0.84),
-                          ),
                         ),
-                        Text(
-                          'View All',
-                          style: AppTextStyle.cairoFontMedium(
-                            fontSize: 16.sp,
-                            myColor: const Color(0xff455A64).withOpacity(0.84),
-                          ),
+                      ),
+                      Text(
+                        'View All',
+                        style: AppTextStyle.cairoFontMedium(
+                          fontSize: 16,
+                          myColor: const Color(0xff455A64).withOpacity(0.84),
                         ),
-                      ],
-                    ),
+                      ),
+                    ],
                   ),
-                  Column(
-                    children: List.generate(6, (index) => ADContainer()),
-                  )
-                ],
-              ),
+                ),
+                Column(
+                  children: List.generate(6, (index) => ADContainer()),
+                )
+              ],
             ),
           ),
         ),

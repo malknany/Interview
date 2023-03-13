@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_cached_pdfview/flutter_cached_pdfview.dart';
 import 'package:interview_project/core/style/text_style.dart';
 import 'package:interview_project/core/utils/app_color.dart';
-import 'package:flutter_cached_pdfview/flutter_cached_pdfview.dart';
 class PDFFile extends StatelessWidget {
-   PDFFile({Key? key,required this.path,required this.title}) : super(key: key);
-  String path,title;
+  const PDFFile({Key? key,required this.path,required this.title}) : super(key: key);
+  final String path,title;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -14,7 +13,7 @@ class PDFFile extends StatelessWidget {
         backgroundColor: Colors.white,
         centerTitle: true,
         foregroundColor: AppColor.myTeal,
-        title: Text(title,style:AppTextStyle.cairoFontMedium(fontSize: 18.sp, myColor: AppColor.myTeal),),
+        title: Text(title,style:AppTextStyle.cairoFontMedium(fontSize: 18, myColor: AppColor.myTeal),),
       ),
       body: PDF(
         enableSwipe: true,

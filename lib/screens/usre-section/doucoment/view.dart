@@ -25,22 +25,31 @@ class _DocumentScreenState extends State<DocumentScreen> {
               children: [
                 Text('Recent Files',
                     style: AppTextStyle.cairoFontMedium(
-                        fontSize: 24.sp, myColor: AppColor.myTeal)),
+                        fontSize: 2, myColor: AppColor.myTeal)),
                 Text(
                   'View All',
                   style: AppTextStyle.cairoFontSimBold(
-                      fontSize: 16.sp, myColor: AppColor.myTeal),
+                      fontSize: 16, myColor: AppColor.myTeal),
                 ),
               ],
             ),
           ),
-          ItemListTile(title: 'Mohamed Resume without photo', subTitle: '45 kb', path: 'assets/PDFs/Mohmed Resume without photo.pdf'),
-          ItemListTile(title: 'Mohamed Resume with photo', subTitle: '73 kb', path: 'assets/PDFs/Mohmed Resume with photo.pdf'),
-          ItemListTile(title: 'Selected Topics', subTitle: '120 kb', path: 'assets/PDFs/Selected_Topics.pdf'),
+          const ItemListTile(
+              title: 'web-developer-interview-questions',
+              subTitle: '26 kb',
+              path: 'assets/PDFs/web-developer-interview-questions.pdf'),
+          const ItemListTile(
+              title: 'CSS', subTitle: '561 kb', path: 'assets/PDFs/CSS.pdf'),
+          const ItemListTile(
+              title: 'HTML', subTitle: '837 kb', path: 'assets/PDFs/HTML.pdf'),
+          const ItemListTile(
+              title: 'Node.js',
+              subTitle: '774 kb',
+              path: 'assets/PDFs/Node.js.pdf'),
+          const ItemListTile(
+              title: 'React', subTitle: '1 mb', path: 'assets/PDFs/React .pdf'),
         ],
       ),
     );
   }
 }
-
-

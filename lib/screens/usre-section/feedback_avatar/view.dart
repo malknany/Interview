@@ -23,7 +23,7 @@ class FeedBackScreen extends StatelessWidget {
                   'You did an excellent job in \n participating with us',
                   textAlign: TextAlign.center,
                   style: AppTextStyle.cairoFontBold(
-                    fontSize: 30.sp,
+                    fontSize: 27,
                     myColor: AppColor.myDarkTeal,
                   ),
                 ),
@@ -32,8 +32,8 @@ class FeedBackScreen extends StatelessWidget {
                   child: Text(
                     'please look forward to your result,\n hope you all the best!',
                     textAlign: TextAlign.center,
-                    style: AppTextStyle.eBFontMedium(
-                      fontSize: 24.sp,
+                    style: AppTextStyle.cairoFontRegular(
+                      fontSize: 16,
                       myColor: AppColor.textColorGray,
                     ),
                   ),
@@ -45,9 +45,9 @@ class FeedBackScreen extends StatelessWidget {
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(10.r),
                     border: Border.all(
-                      color: Color(0xffBEBEBE),
+                      color: const Color(0xffBEBEBE),
                       width: 1.w,
-                      strokeAlign: StrokeAlign.inside,
+                      strokeAlign: BorderSide.strokeAlignInside
                     ),
                     boxShadow: [
                       BoxShadow(
@@ -67,13 +67,13 @@ class FeedBackScreen extends StatelessWidget {
                             Text(
                               'Leave Feedback',
                               style: AppTextStyle.cairoFontSimBold(
-                                  fontSize: 20.sp,
+                                  fontSize: 20,
                                   myColor: AppColor.myDarkTeal),
                             ),
                             Text(
                               'How Was Your Experience?',
-                              style: AppTextStyle.eBFontRegular(
-                                  fontSize: 15.sp,
+                              style: AppTextStyle.cairoFontRegular(
+                                  fontSize: 13,
                                   myColor: AppColor.textColorGray),
                             ),
                           ],
@@ -88,20 +88,20 @@ class FeedBackScreen extends StatelessWidget {
                               context: context,
                               builder: (context) => StatefulBuilder(
                                   builder: (context, setState) =>
-                                      BottomSheetFeedBack()),
+                                      const BottomSheetFeedBack()),
                             );
                           },
-                          child: Text(
-                            'Give FeedBack',
-                            style: AppTextStyle.cairoFontSimBold(
-                                fontSize: 19.sp, myColor: Colors.white),
-                          ),
                           style: ElevatedButton.styleFrom(
                             backgroundColor: AppColor.myDarkTeal,
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(10.r),
                             ),
                             fixedSize: Size(137.w, 55.h),
+                          ),
+                          child: Text(
+                            'Give FeedBack',
+                            style: AppTextStyle.cairoFontSimBold(
+                                fontSize: 15, myColor: Colors.white),
                           ),
                         ),
                       ),

@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:interview_project/core/utils/app_color.dart';
 
 class AvatarControllerContainer extends StatelessWidget {
-  AvatarControllerContainer(
+  const AvatarControllerContainer(
       {Key? key,
       required this.icons,
       this.myColor = Colors.white,

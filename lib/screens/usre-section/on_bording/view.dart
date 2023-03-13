@@ -22,6 +22,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
       body: SafeArea(
         child: GestureDetector(
           onTap: () {
+            const Duration(milliseconds: 450);
             setState(() {
               if (control.index < 2) {
                 control.index++;
@@ -34,7 +35,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
             color: Colors.white,
             width: double.infinity,
             child: Padding(
-              padding: EdgeInsets.symmetric(horizontal: 20.w),
+              padding: EdgeInsets.symmetric(horizontal: 25.w),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
@@ -85,14 +86,13 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                     height: 20.h,
                   ),
                   Expanded(
-                    child: Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 20.w),
-                      child: Text(
-                        control.onBoarding[control.index].subTitle,
-                        style: AppTextStyle.eBFontMedium(
-                            fontSize: 23, myColor: AppColor.myGraySubTitle),
-                        textAlign: TextAlign.center,
+                    child: Text(
+                      control.onBoarding[control.index].subTitle,
+                      style: AppTextStyle.cairoFontRegular(
+                        fontSize: 20,
+                        myColor: AppColor.myGraySubTitle,
                       ),
+                      textAlign: TextAlign.center,
                     ),
                   ),
 

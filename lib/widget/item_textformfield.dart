@@ -5,12 +5,13 @@ import 'package:interview_project/core/style/text_style.dart';
 import '../core/utils/app_color.dart';
 
 class ItemTextFormFiled extends StatelessWidget {
-  const ItemTextFormFiled({Key? key, required this.hintText}) : super(key: key);
+  const ItemTextFormFiled({Key? key, this.hintText=''}) : super(key: key);
   final String hintText;
 
   @override
   Widget build(BuildContext context) {
     return Container(
+      margin: EdgeInsets.symmetric(vertical: 6.h),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10.r),
         boxShadow: [
@@ -26,13 +27,13 @@ class ItemTextFormFiled extends StatelessWidget {
             focusedBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(2.r),
                 borderSide: BorderSide(
-                    strokeAlign: StrokeAlign.inside,
+                    strokeAlign: BorderSide.strokeAlignInside,
                     width: 1.w,
                     color: AppColor.myTeal)),
             enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(10.r),
                 borderSide: BorderSide(
-                    strokeAlign: StrokeAlign.inside,
+                    strokeAlign: BorderSide.strokeAlignInside,
                     width: 1.w,
                     color: AppColor.borderTextFiled)),
             filled: true,
@@ -40,8 +41,8 @@ class ItemTextFormFiled extends StatelessWidget {
             contentPadding:
                 EdgeInsets.only(left: 30.w, top: 15.h, bottom: 15.h),
             hintText: hintText,
-            hintStyle: AppTextStyle.cairoFontBold(
-                fontSize: 20, myColor: AppColor.textFiledColor)),
+            hintStyle: AppTextStyle.cairoFontSimBold(
+                fontSize: 18, myColor: AppColor.textFiledColor.withOpacity(0.86),),),
       ),
     );
   }

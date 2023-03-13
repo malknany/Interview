@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:interview_project/core/app-rout/navigate.dart';
+import 'package:interview_project/core/app_alert/alert.dart';
 import 'package:interview_project/core/style/text_style.dart';
 import 'package:interview_project/core/utils/app_color.dart';
 import 'package:interview_project/screens/usre-section/avatar/widget/avata_control_container.dart';
 import 'package:interview_project/screens/usre-section/homepage/view.dart';
-import 'package:quickalert/quickalert.dart';
 
 import '../feedback_avatar/view.dart';
 
@@ -40,13 +40,12 @@ class AvatarScreen extends StatelessWidget {
               //   ),
               // ),
               TweenAnimationBuilder<Duration>(
-                  duration: Duration(minutes: 1),
-                  tween: Tween(begin: Duration(minutes: 1), end: Duration.zero),
+                  duration: const Duration(minutes: 1),
+                  tween: Tween(begin: const Duration(minutes: 1), end: Duration.zero),
                   onEnd: () {
-                    print('Timer ended');
                     navigateTo(
                       context,
-                      FeedBackScreen(),
+                      const FeedBackScreen(),
                     );
                   },
                   builder:
@@ -59,7 +58,7 @@ class AvatarScreen extends StatelessWidget {
                         '$minutes:$seconds',
                         textAlign: TextAlign.center,
                         style: AppTextStyle.cairoFontBold(
-                            fontSize: 32.sp, myColor: AppColor.myTeal),
+                            fontSize: 32, myColor: AppColor.myTeal),
                       ),
                     );
                   }),
@@ -85,39 +84,7 @@ class AvatarScreen extends StatelessWidget {
                     AvatarControllerContainer(
                         icons: Icons.clear,
                         ontap: () {
-                          QuickAlert.show(
-                            context: context,
-                            type: QuickAlertType.warning,
-                            showCancelBtn: true,
-                            borderRadius: 50.r,
-                            onConfirmBtnTap: () => navigateToAndRemove(context,
-                                page: HomePageScreen(), withHistory: false),
-                            onCancelBtnTap: () => Navigator.pop(context),
-                            cancelBtnText: 'No',
-                            cancelBtnTextStyle: TextStyle(
-                              color: AppColor.textColorGray.withOpacity(0.86),
-                              fontSize: 20.sp,
-                            ),
-                            confirmBtnText: 'Yes',
-                            confirmBtnTextStyle: AppTextStyle.eBFontMedium(
-                                fontSize: 24.sp, myColor: Colors.white),
-                            confirmBtnColor: AppColor.myTeal,
-                            animType: QuickAlertAnimType.scale,
-                            //titleColor: AppColor.myTeal,
-                            widget: Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Center(
-                                  child: Text(
-                                      'Are You Sure you want to leave this meeting',
-                                      textAlign: TextAlign.center,
-                                      style: AppTextStyle.cairoFontBold(
-                                          fontSize: 24.sp,
-                                          myColor: AppColor.myTeal)),
-                                )
-                              ],
-                            ),
-                          );
+                          ShowAlert.showAlertWaring(context, const HomePageScreen());
                         }),
                   ],
                 ),

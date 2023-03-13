@@ -17,7 +17,7 @@ class OverViewItems extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         Container(
-          margin: EdgeInsets.only(bottom: 14.h),
+          margin: EdgeInsets.symmetric(vertical: 14.h),
           height: 62.h,
           width: 66.w,
           decoration: BoxDecoration(
@@ -33,7 +33,7 @@ class OverViewItems extends StatelessWidget {
             border: Border.all(
               color: const Color(0xffE0E0E0),
               width: 1.w,
-              strokeAlign: StrokeAlign.inside,
+              strokeAlign: BorderSide.strokeAlignInside,
             ),
           ),
           child: Center(
@@ -43,7 +43,7 @@ class OverViewItems extends StatelessWidget {
         Text(
           subTitle,
           style: AppTextStyle.cairoFontSimBold(
-              fontSize: 16.sp, myColor: AppColor.textColorGray),
+              fontSize: 15, myColor: AppColor.textColorGray),
         ),
       ],
     );
