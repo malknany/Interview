@@ -1,5 +1,3 @@
-
-
 import 'dart:io';
 
 import 'package:file_picker/file_picker.dart';
@@ -12,11 +10,10 @@ import 'package:interview_project/screens/company-section/my_dataset/view.dart';
 import 'package:interview_project/widget/item_button.dart';
 
 class CompUploadScreen extends StatelessWidget {
-   CompUploadScreen({Key? key}) : super(key: key);
+  CompUploadScreen({Key? key}) : super(key: key);
   late List<File> files;
   @override
   Widget build(BuildContext context) {
-
     return SafeArea(
         child: SizedBox(
       width: double.infinity,
@@ -25,7 +22,7 @@ class CompUploadScreen extends StatelessWidget {
           GestureDetector(
             onTap: () => navigateTo(context, const CompDataSetScreen()),
             child: Container(
-              margin: EdgeInsets.symmetric(vertical: 30.h,horizontal: 23.w),
+              margin: EdgeInsets.symmetric(vertical: 30.h, horizontal: 23.w),
               padding: EdgeInsets.symmetric(horizontal: 10.w),
               height: 43.h,
               width: double.infinity,
@@ -88,19 +85,36 @@ class CompUploadScreen extends StatelessWidget {
                     height: 32.h,
                   ),
                   ItemButtonWidget(
-                      text: 'choose file',
-                      nextPage: () async{
-                        FilePickerResult? result = await FilePicker.platform.pickFiles(type: FileType.custom,allowedExtensions: ['text'],allowMultiple: true);
-                        if (result != null) {
-                           files = result.paths.map((path) => File(path!)).toList();
-                          //result.paths.map((path) => File(path)).toList();
-                        } else {
-                          // User canceled the picker
-                        }
-                      },
-                      sizeFont: 20,
-                      height: 53,
-                      width: 198,),
+                    text: 'choose file',
+                    nextPage: () async {
+                      final result = await FilePicker.platform.pickFiles(
+                          type: FileType.custom,
+                          allowedExtensions: ['txt'],
+                          allowMultiple: true);
+                      if (result != null) {
+                        files =
+                            result.paths.map((path) => File(path!)).toList();
+                        print("Success Upload File");
+                        final snackBar = SnackBar(
+                          content: Text(
+                            'Success Upload File',
+                            style: AppTextStyle.cairoFontLight(
+                              fontSize: 18,
+                              myColor: Colors.white,
+                            ),
+                          ),
+                          backgroundColor: AppColor.myTeal,
+                        );
+                        ScaffoldMessenger.of(context).showSnackBar(snackBar);
+                        //result.paths.map((path) => File(path)).toList();
+                      } else {
+                        // User canceled the picker
+                      }
+                    },
+                    sizeFont: 20,
+                    height: 53,
+                    width: 198,
+                  ),
                   // InkWell(
                   //   child: Container(
                   //     height: 53.h,

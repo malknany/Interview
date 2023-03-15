@@ -73,7 +73,7 @@ class CompADS extends StatelessWidget {
                       ),
                     ),
                     Padding(
-                      padding: EdgeInsets.only(bottom: 11.0.h),
+                      padding: EdgeInsets.only(bottom: 8.0.h),
                       child: Text(controller.infoComp[index].location,
                           softWrap: true,
                           overflow: TextOverflow.ellipsis,
