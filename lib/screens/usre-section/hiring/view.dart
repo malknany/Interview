@@ -104,7 +104,13 @@ class _HiringScreenState extends State<HiringScreen> {
                   ),
                 ),
                 Column(
-                  children: List.generate(6, (index) => ADContainer()),
+                  children: HiringController().ads.map((e) {
+                    return ADContainer(
+                      title: e.textTitle,
+                      company:e.nameCompany,
+                      address: e.location,
+                    );
+                  }).toList(),
                 )
               ],
             ),

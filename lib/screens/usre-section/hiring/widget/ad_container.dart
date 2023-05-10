@@ -8,7 +8,15 @@ import 'package:interview_project/screens/usre-section/hiring/controler.dart';
 import '../../../../core/style/text_style.dart';
 
 class ADContainer extends StatelessWidget {
-  ADContainer({Key? key}) : super(key: key);
+  ADContainer({Key? key, this.image, this.company, this.title, this.date, this.address, this.bookmarked, this.isProfileMatched}) : super(key: key);
+
+  final String? image;
+  final String? company;
+  final String? title;
+  final String? date;
+  final String? address;
+  final bool? bookmarked;
+  final bool? isProfileMatched;
 
   final controller = HiringController();
 
@@ -44,7 +52,7 @@ class ADContainer extends StatelessWidget {
                   child: SizedBox(
                       width: 76.w,
                       height: 76.h,
-                      child: Image.asset(controller.ads[0].image)),
+                      child: Image.asset(image ?? controller.ads[0].image)),
                 ),
               ],
             ),
@@ -54,7 +62,7 @@ class ADContainer extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Expanded(
-                    child: Text(controller.ads[0].textTitle,
+                    child: Text(title ?? controller.ads[0].textTitle,
                         softWrap: true,
                         overflow: TextOverflow.ellipsis,
                         style: AppTextStyle.cairoFontBold(
@@ -63,7 +71,7 @@ class ADContainer extends StatelessWidget {
                   ),
                   Expanded(
                     child: Text(
-                      controller.ads[0].nameCompany,
+                      company ?? controller.ads[0].nameCompany,
                       softWrap: true,
                       overflow: TextOverflow.ellipsis,
                       style: AppTextStyle.cairoFontSimBold(
@@ -74,7 +82,7 @@ class ADContainer extends StatelessWidget {
                   ),
                   Expanded(
                     flex: 2,
-                    child: Text(controller.ads[0].location,
+                    child: Text(address ?? controller.ads[0].location,
                         softWrap: true,
                         overflow: TextOverflow.ellipsis,
                         style: AppTextStyle.cairoFontSimBold(
@@ -92,6 +100,7 @@ class ADContainer extends StatelessWidget {
                           color: Color(0xff18DAD0),
                         ),
                       ),
+                      if (isProfileMatched == true)
                       Expanded(
                         flex: 4,
                         child: Text(

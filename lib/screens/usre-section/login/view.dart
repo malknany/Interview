@@ -3,10 +3,11 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:interview_project/core/app-rout/navigate.dart';
 import 'package:interview_project/core/style/text_style.dart';
 import 'package:interview_project/core/utils/app_color.dart';
+import 'package:interview_project/screens/usre-section/homepage/view.dart';
 import 'package:interview_project/screens/usre-section/login/widget/text_in_line.dart';
 import 'package:interview_project/screens/usre-section/signup/view.dart';
 import 'package:interview_project/widget/item_button.dart';
-
+import 'package:http/http.dart' as http;
 import '../../../widget/item_textformfield.dart';
 
 class LogInScreen extends StatefulWidget {
@@ -19,6 +20,9 @@ class LogInScreen extends StatefulWidget {
 class _LogInScreenState extends State<LogInScreen> {
   bool checkBox = false;
 
+  // String? email, password;
+  var emailController = TextEditingController();
+  var passController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -38,11 +42,19 @@ class _LogInScreenState extends State<LogInScreen> {
                 SizedBox(
                   height: 30.8.h,
                 ),
-                const ItemTextFormFiled(hintText: 'enter your email'),
+                ItemTextFormFiled(
+                  controller: emailController,
+                  hintText: 'enter your email',
+                  // onChanged: (v) => email = v,
+                ),
                 SizedBox(
                   height: 35.h,
                 ),
-                const ItemTextFormFiled(hintText: 'password'),
+                ItemTextFormFiled(
+                  controller: passController,
+                  hintText: 'password',
+                  // onChanged: (v) => password = v,
+                ),
                 SizedBox(
                   height: 19.h,
                 ),
@@ -76,7 +88,11 @@ class _LogInScreenState extends State<LogInScreen> {
                 SizedBox(
                   height: 30.h,
                 ),
-                ItemButtonWidget(text: 'Login', nextPage: () {}),
+                ItemButtonWidget(
+                    text: 'Login',
+                    nextPage: () {
+                      HomePageScreen();
+                    }),
                 SizedBox(
                   height: 25.h,
                 ),
@@ -140,5 +156,26 @@ class _LogInScreenState extends State<LogInScreen> {
         ),
       )),
     );
+  }
+
+  // CREATE FUNCTION TO CALL LOGIN POST API
+  Future<void> login() async {
+    if (passController.text.isNotEmpty && emailController.text.isNotEmpty) {
+      var response = await http.post(Uri.parse(" uri      "),
+          //PASSING 2 PARAMETERS INSIDE BODY
+          body: ({
+            "email": emailController.text,
+            "password": passController.text
+          }));
+      if(response.statusCode==200){
+
+      }else{
+        ScaffoldMessenger.of(context)
+            .showSnackBar(SnackBar(content: Text("Invalid Credentials.")));
+      }
+    } else {
+      ScaffoldMessenger.of(context)
+          .showSnackBar(SnackBar(content: Text("Black Field Not Allowed")));
+    }
   }
 }

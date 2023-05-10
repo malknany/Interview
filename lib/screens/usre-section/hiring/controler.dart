@@ -29,5 +29,12 @@ class HiringController {
       location: 'Qesm 2nd El Mansoura, Ad Daqahliyah,\n Egypt (On-site )',
       time: '2 days ago',
     ),
+    HiringADSModel(
+      image: 'assets/image/company_Logo.png',
+      textTitle: 'Flutter Developer',
+      nameCompany: 'Uber ',
+      location: 'Qesm ElMaadi, Cairo,\n Egypt (Remote )',
+      time: '1 month ago',
+    ),
   ];
 }
