@@ -16,20 +16,15 @@ class RegisterCubit extends Cubit<RegisterStates> {
   final formKey = GlobalKey<FormState>();
 
   Future<void> register() async {
-    if (!formKey.currentState!.validate()) {
-      return;
+    //if (!formKey.currentState!.validate()) {
+     // return;
+   // }
+    formKey.currentState?.save();
+    if (Enteryouremail == 'nahed@gmail.com') {
+      emit(RegisterErrorState(message: 'Email exists!'));
+    } else {
+      emit(RegisterSuccessState());
     }
-    emit(RegisterLoadingState());
-    formKey.currentState!.save();
-    var response = await http.post(
-      Uri.parse(
-        " uri      ",
-        //SENDING DATA BY THE SAME SPELLING FOR EXAMPLE
-        //data:{
-        // "name":"name", => DATA THAT IS ENTERED BY USER
-        // }
-      ),
-    );
 
   }
 }

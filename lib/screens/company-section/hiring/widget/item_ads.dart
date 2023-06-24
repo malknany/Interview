@@ -39,7 +39,7 @@ class CompADS extends StatelessWidget {
           child: Row(
             children: [
               Padding(
-                padding:  const EdgeInsets.all(8.0),
+                padding: const EdgeInsets.all(8.0),
                 child: SizedBox(
                   width: 60.w,
                   height: 76.h,
@@ -57,8 +57,7 @@ class CompADS extends StatelessWidget {
                           softWrap: true,
                           overflow: TextOverflow.ellipsis,
                           style: AppTextStyle.cairoFontBold(
-                              fontSize: 18,
-                              myColor: AppColor.myDarkTealTitle)),
+                              fontSize: 18, myColor: AppColor.myDarkTealTitle)),
                     ),
                     Padding(
                       padding: EdgeInsets.only(bottom: 2.0.h),
@@ -107,6 +106,9 @@ class CompADS extends StatelessWidget {
                     ),
                   ],
                 ),
+              ),
+              SizedBox(
+                height: 76.h,
               ),
             ],
           ),

@@ -9,6 +9,9 @@ import 'package:interview_project/screens/usre-section/signup/view.dart';
 import 'package:interview_project/widget/item_button.dart';
 import 'package:http/http.dart' as http;
 import '../../../widget/item_textformfield.dart';
+import '../hiring/view.dart';
+import '../inof_from_user/view.dart';
+
 
 class LogInScreen extends StatefulWidget {
   const LogInScreen({Key? key}) : super(key: key);
@@ -20,9 +23,10 @@ class LogInScreen extends StatefulWidget {
 class _LogInScreenState extends State<LogInScreen> {
   bool checkBox = false;
 
-  // String? email, password;
-  var emailController = TextEditingController();
-  var passController = TextEditingController();
+  String? email;
+  String? password;
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -43,17 +47,17 @@ class _LogInScreenState extends State<LogInScreen> {
                   height: 30.8.h,
                 ),
                 ItemTextFormFiled(
-                  controller: emailController,
+                  // controller: emailController,
                   hintText: 'enter your email',
-                  // onChanged: (v) => email = v,
+                  onChanged: (v) => email = v,
                 ),
                 SizedBox(
                   height: 35.h,
                 ),
                 ItemTextFormFiled(
-                  controller: passController,
+                  // controller: passController,
                   hintText: 'password',
-                  // onChanged: (v) => password = v,
+                  onChanged: (v) => password = v,
                 ),
                 SizedBox(
                   height: 19.h,
@@ -89,10 +93,17 @@ class _LogInScreenState extends State<LogInScreen> {
                   height: 30.h,
                 ),
                 ItemButtonWidget(
-                    text: 'Login',
-                    nextPage: () {
-                      HomePageScreen();
-                    }),
+                  text: 'Login',
+                  nextPage: () {
+                    if (email == "nahed@gmail.com" && password == "198876") {
+                      navigateToAndReplace(context, const HiringScreen());
+                    } else {
+                      print("Unauthenticated");
+                      ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                          content: Text('Username or Password is incorrect')));
+                    }
+                  },
+                ),
                 SizedBox(
                   height: 25.h,
                 ),
@@ -157,25 +168,25 @@ class _LogInScreenState extends State<LogInScreen> {
       )),
     );
   }
-
-  // CREATE FUNCTION TO CALL LOGIN POST API
-  Future<void> login() async {
-    if (passController.text.isNotEmpty && emailController.text.isNotEmpty) {
-      var response = await http.post(Uri.parse(" uri      "),
-          //PASSING 2 PARAMETERS INSIDE BODY
-          body: ({
-            "email": emailController.text,
-            "password": passController.text
-          }));
-      if(response.statusCode==200){
-
-      }else{
-        ScaffoldMessenger.of(context)
-            .showSnackBar(SnackBar(content: Text("Invalid Credentials.")));
-      }
-    } else {
-      ScaffoldMessenger.of(context)
-          .showSnackBar(SnackBar(content: Text("Black Field Not Allowed")));
-    }
-  }
 }
+//   // CREATE FUNCTION TO CALL LOGIN POST API
+//   Future<void> login() async {
+//     if (passController.text.isNotEmpty && emailController.text.isNotEmpty) {
+//       var response = await http.post(Uri.parse("127.0.0.1:8000/api/login?email=company@gmail.com&password=01230123&AuthType=company"));
+//           //PASSING 2 PARAMETERS INSIDE BODY
+//           // body: ({
+//           //   "email": emailController.text,
+//           //   "password": passController.text
+//           // }));
+//       if(response.statusCode==200){
+//
+//       }else{
+//         ScaffoldMessenger.of(context)
+//             .showSnackBar(SnackBar(content: Text("Invalid Credentials.")));
+//       }
+//     } else {
+//       ScaffoldMessenger.of(context)
+//           .showSnackBar(SnackBar(content: Text("Black Field Not Allowed")));
+//     }
+//   }
+// }

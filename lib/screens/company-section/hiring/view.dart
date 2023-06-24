@@ -1,5 +1,8 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:http/http.dart';
 import 'package:interview_project/core/app-rout/navigate.dart';
 import 'package:interview_project/core/style/text_style.dart';
 import 'package:interview_project/core/utils/app_color.dart';
@@ -14,6 +17,7 @@ class CompHiringScreen extends StatefulWidget {
 }
 
 class _CompHiringScreenState extends State<CompHiringScreen> {
+  @override
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -31,7 +35,8 @@ class _CompHiringScreenState extends State<CompHiringScreen> {
                     fontSize: 20, myColor: AppColor.myDarkTeal),
               ),
               InkWell(
-                onTap: () => navigateTo(context, const CompAddAdvertisementScreen()),
+                onTap: () =>
+                    navigateTo(context, const CompAddAdvertisementScreen()),
                 child: Container(
                   margin: EdgeInsets.symmetric(vertical: 20.h),
                   padding: EdgeInsets.symmetric(horizontal: 10.w),

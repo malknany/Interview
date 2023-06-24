@@ -31,7 +31,7 @@ class InfoFromUser extends StatelessWidget {
                     ),
                   ),
                 ),
-                ItemDropDownWidget(listOfName: const [''], hintText: ''),
+                ItemDropDownWidget(listOfName: const ["Student", "Senior","Junior"], hintText: ''),
                 SizedBox(
                   height: 17.h,
                 ),
@@ -45,7 +45,7 @@ class InfoFromUser extends StatelessWidget {
                     ),
                   ),
                 ),
-                ItemDropDownWidget(listOfName: const [''], hintText: ''),
+                ItemDropDownWidget(listOfName: const ["Flutter", "BackEnd","FrontEnd"], hintText: ''),
                 SizedBox(
                   height: 17.h,
                 ),
@@ -59,7 +59,7 @@ class InfoFromUser extends StatelessWidget {
                     ),
                   ),
                 ),
-                ItemDropDownWidget(listOfName: const [''], hintText: ''),
+                ItemDropDownWidget(listOfName: const ["Mansoura", "Cairo","Alexandria","Damietta","Luxor"], hintText: ''),
                 SizedBox(
                   height: 17.h,
                 ),
@@ -73,7 +73,7 @@ class InfoFromUser extends StatelessWidget {
                     ),
                   ),
                 ),
-                ItemDropDownWidget(listOfName: const [''], hintText: ''),
+                ItemDropDownWidget(listOfName: const ["1-3","2-5","5-10"], hintText: ''),
                 SizedBox(
                   height: 17.h,
                 ),
@@ -87,7 +87,7 @@ class InfoFromUser extends StatelessWidget {
                     ),
                   ),
                 ),
-                ItemDropDownWidget(listOfName: const [''], hintText: ''),
+                ItemDropDownWidget(listOfName: const ["Part time","Full time"], hintText: ''),
                 SizedBox(
                   height: 39.h,
                 ),

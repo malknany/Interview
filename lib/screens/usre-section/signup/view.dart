@@ -31,11 +31,11 @@ class _SignUpScreenState extends State<SignUpScreen> {
       child: Scaffold(
         body: BlocListener<RegisterCubit, RegisterStates>(
           listener: (context, state) {
-            if (State is RegisterSuccessState) {
+            if (state is RegisterSuccessState) {
               print("NAVIGATE TO HOME");
-            } else if (State is RegisterErrorState) {
+            } else if (state is RegisterErrorState) {
               ScaffoldMessenger.of(context)
-                  .showSnackBar(SnackBar(content: Text("Error")));
+                  .showSnackBar(SnackBar(content: Text(state.message)));
             }
           },
           child: SafeArea(
@@ -143,11 +143,6 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                     text: 'Register',
                                     nextPage: () {
                                       cubit.register();
-                                      navigateToAndRemoveUntil(
-                                        context,
-                                        page: const UpLoadPhotoScreen(
-                                            nextPage: InfoFromUser()),
-                                      );
                                     });
                               },
                             ),
